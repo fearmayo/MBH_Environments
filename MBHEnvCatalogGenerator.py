@@ -62,7 +62,6 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 import h5py
 import numpy as np
-import argparse
 import sys
 
 __VERSION__ = '1.0' # catalog version
@@ -77,6 +76,9 @@ np.random.seed(5)
 ############################################################################################
 ############################################################################################
 ############################################################################################
+
+
+SIMULATION="SEEDZ"
 
 def input_data():
     '''
@@ -117,7 +119,7 @@ def input_data():
     metadata = {
         # ---- Header data - identifying information for the dataset
         # REQUIRED
-        'SimulationName': 'SEEDZ',
+        'SimulationName': SIMULATION,
         'SimulationVersion': 'LowRes',
         'ModelType': 'Hydro',
         'Version': __VERSION__,
@@ -208,7 +210,7 @@ def get_binary_information(metadata):
     N_binaries = 1000
 
     #Black Hole properties
-    galid = np.range(N_binaries)
+    galid = np.arange(N_binaries)
     m1 = np.random.normal(loc=1e7, scale=1e6, size=N_binaries)
     m2 = np.random.normal(loc=1e7, scale=1e6, size=N_binaries)
     m1, m2 = np.max([m1, m2], axis=0), np.min([m1, m2], axis=0)
@@ -227,7 +229,7 @@ def get_binary_information(metadata):
     mdm = mstar * np.maximum(1.0, np.random.normal(loc=10.0, scale=1.0, size=N_binaries))
     zgal = z - np.random.uniform(0, 0.001, size=N_binaries)
     R50 = np.random.normal(loc=3, scale=0.1, size=N_binaries)
-    metallicty =  np.random.normal(loc=1e10, scale=1e8, size=N_binaries)
+    metallicity =  np.random.normal(loc=1e10, scale=1e8, size=N_binaries)
     galpos = "central"
    
     # FILL METADATA INFO
@@ -260,7 +262,7 @@ def get_binary_information(metadata):
             'Separation': sepa,
             'NumberDensity': W,
         },
-        "Galaxies": {
+        "HostGalaxy": {
             'GalaxyID': galid,
             'SFR': sfr,
             'RemnantStellarMass': mstar,
@@ -268,9 +270,74 @@ def get_binary_information(metadata):
             'RemnantRedshift': zgal,
             'RemnantR50': R50,
             'RemnantMetallicity': metallicity,
-            'RemnantPosition', galpos,
+            'RemnantPosition': galpos,
         }
     }
 
     return mbhenv
 
+def write_catalog_hdf5(filename, metadata, mbhenv):
+    """
+    Write the MBH environment catalog to an HDF5 file.
+
+    Parameters
+    ----------
+    filename : str
+    metadata : dict
+    mbhenv : dict with structure:
+        mbhenv["BlackHoles"][field] = array
+        mbhenv["HostGalaxy"][field] = array
+    """
+
+    with h5py.File(filename, "w") as f:
+
+        # ----------------------------------------------------
+        # Metadata group
+        # ----------------------------------------------------
+        gmeta = f.create_group("Metadata")
+        for key, value in metadata.items():
+            # store strings as fixed-length UTF-8
+            if isinstance(value, str):
+                gmeta.attrs[key] = np.string_(value)
+            elif isinstance(value, list):
+                # convert lists-of-strings to variable-length strings
+                gmeta.attrs[key] = [np.string_(v) for v in value]
+            else:
+                gmeta.attrs[key] = value
+
+        # ----------------------------------------------------
+        # Black hole binary information
+        # ----------------------------------------------------
+        gbh = f.create_group("Binaries")
+        for key, arr in mbhenv["BlackHoles"].items():
+            gbh.create_dataset(key, data=np.array(arr),
+                               compression="gzip")
+
+        # ----------------------------------------------------
+        # Host galaxy information
+        # ----------------------------------------------------
+        ggal = f.create_group("HostGalaxy")
+        for key, arr in mbhenv["HostGalaxy"].items():
+            # SFR is a special dictionary → store separately
+            if key == "SFR":
+                gsfr = ggal.create_group("SFR")
+                for k2, arr2 in arr.items():
+                    gsfr.create_dataset(k2, data=np.array(arr2),
+                                        compression="gzip")
+            else:
+                ggal.create_dataset(key, data=np.array(arr),
+                                    compression="gzip")
+
+    print(f"[✓] Wrote catalog to {filename}")
+
+
+
+def main():
+    print("Generating MBH Environment Catalog...")
+
+    metadata, mbhenv = input_data()
+    filename = "MBH_Environment_Catalog_%s.hdf5" % (SIMULATION)
+    write_catalog_hdf5(args.output, metadata, mbhenv)
+
+if __name__ == "__main__":
+    main()

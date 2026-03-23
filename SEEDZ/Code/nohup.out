@@ -1,0 +1,1347 @@
+[11:00:06] INFO: Loading sinks...
+[11:00:13] INFO: Loading galaxy list...
+[11:00:16] INFO: Using 32 workers for 926 mergers
+
+=== SINK SUMMARY ===
+Total number of sinks: 4260
+Sink types and counts: Counter({'MBH': 3279, 'PopIII': 981})
+Number of MBH sinks that exist at z=10: 2452
+Most massive MBH mass at z=10: 2.183e+09 Msun
+=== END SINK SUMMARY ===
+
+[11:00:34] INFO: [Snapshot 82] Loading snapshot...
+yt : [INFO     ] 2026-03-23 11:00:36,916 Calculating time from 4.783e-02 to be 5.687e+15 seconds
+yt : [INFO     ] 2026-03-23 11:00:36,959 Parameters: current_time              = 5687496753124591.0 s
+yt : [INFO     ] 2026-03-23 11:00:36,959 Parameters: domain_dimensions         = [1 1 1]
+yt : [INFO     ] 2026-03-23 11:00:36,959 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2026-03-23 11:00:36,959 Parameters: domain_right_edge         = [40000. 40000. 40000.]
+yt : [INFO     ] 2026-03-23 11:00:36,959 Parameters: cosmological_simulation   = True
+yt : [INFO     ] 2026-03-23 11:00:36,959 Parameters: current_redshift          = 19.909197904584314
+yt : [INFO     ] 2026-03-23 11:00:36,959 Parameters: omega_lambda              = 0.685
+yt : [INFO     ] 2026-03-23 11:00:36,959 Parameters: omega_matter              = 0.315
+yt : [INFO     ] 2026-03-23 11:00:36,959 Parameters: omega_radiation           = 0.0
+yt : [INFO     ] 2026-03-23 11:00:36,959 Parameters: hubble_constant           = 0.674
+yt : [INFO     ] 2026-03-23 11:00:37,144 Allocating for 5.78e+07 particles
+Loading particle index:   0%|          | 0/128 [00:00<?, ?it/s]Loading particle index:  46%|████▌     | 59/128 [00:00<00:00, 579.07it/s]Loading particle index:  91%|█████████▏| 117/128 [00:00<00:00, 577.67it/s]Loading particle index: 100%|██████████| 128/128 [00:00<00:00, 575.62it/s]
+[11:00:43] INFO: [Snapshot 89] Loading snapshot...
+[11:00:44] INFO: [Snapshot 82] Preloading particle fields...
+yt : [INFO     ] 2026-03-23 11:00:46,177 Calculating time from 4.993e-02 to be 6.068e+15 seconds
+yt : [INFO     ] 2026-03-23 11:00:46,219 Parameters: current_time              = 6067662015150347.0 s
+yt : [INFO     ] 2026-03-23 11:00:46,220 Parameters: domain_dimensions         = [1 1 1]
+yt : [INFO     ] 2026-03-23 11:00:46,220 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2026-03-23 11:00:46,220 Parameters: domain_right_edge         = [40000. 40000. 40000.]
+yt : [INFO     ] 2026-03-23 11:00:46,220 Parameters: cosmological_simulation   = True
+yt : [INFO     ] 2026-03-23 11:00:46,220 Parameters: current_redshift          = 19.026373487165625
+yt : [INFO     ] 2026-03-23 11:00:46,220 Parameters: omega_lambda              = 0.685
+yt : [INFO     ] 2026-03-23 11:00:46,220 Parameters: omega_matter              = 0.315
+yt : [INFO     ] 2026-03-23 11:00:46,220 Parameters: omega_radiation           = 0.0
+yt : [INFO     ] 2026-03-23 11:00:46,220 Parameters: hubble_constant           = 0.674
+yt : [INFO     ] 2026-03-23 11:00:46,408 Allocating for 5.805e+07 particles
+Loading particle index:   0%|          | 0/128 [00:00<?, ?it/s]Loading particle index:  49%|████▉     | 63/128 [00:00<00:00, 624.86it/s]Loading particle index:  98%|█████████▊| 126/128 [00:00<00:00, 613.87it/s]Loading particle index: 100%|██████████| 128/128 [00:00<00:00, 610.24it/s]
+[11:00:48] INFO: [Snapshot 82] Unique galaxies: 1
+[11:00:53] INFO: [Snapshot 91] Loading snapshot...
+[11:00:53] INFO: [Snapshot 89] Preloading particle fields...
+yt : [INFO     ] 2026-03-23 11:00:56,200 Calculating time from 5.066e-02 to be 6.200e+15 seconds
+yt : [INFO     ] 2026-03-23 11:00:56,243 Parameters: current_time              = 6199948048444915.0 s
+yt : [INFO     ] 2026-03-23 11:00:56,243 Parameters: domain_dimensions         = [1 1 1]
+yt : [INFO     ] 2026-03-23 11:00:56,243 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2026-03-23 11:00:56,243 Parameters: domain_right_edge         = [40000. 40000. 40000.]
+yt : [INFO     ] 2026-03-23 11:00:56,243 Parameters: cosmological_simulation   = True
+yt : [INFO     ] 2026-03-23 11:00:56,243 Parameters: current_redshift          = 18.740461010683706
+yt : [INFO     ] 2026-03-23 11:00:56,243 Parameters: omega_lambda              = 0.685
+yt : [INFO     ] 2026-03-23 11:00:56,243 Parameters: omega_matter              = 0.315
+yt : [INFO     ] 2026-03-23 11:00:56,243 Parameters: omega_radiation           = 0.0
+yt : [INFO     ] 2026-03-23 11:00:56,243 Parameters: hubble_constant           = 0.674
+yt : [INFO     ] 2026-03-23 11:00:56,431 Allocating for 5.812e+07 particles
+Loading particle index:   0%|          | 0/128 [00:00<?, ?it/s]Loading particle index:  46%|████▌     | 59/128 [00:00<00:00, 585.80it/s]Loading particle index:  92%|█████████▏| 118/128 [00:00<00:00, 581.47it/s]Loading particle index: 100%|██████████| 128/128 [00:00<00:00, 579.52it/s]
+[11:00:57] WARNING: [Snapshot 82] BH id 98248981 not found in sinks. Skipping galaxy 0.
+[11:00:57] INFO: [Snapshot 84] Loading snapshot...
+yt : [INFO     ] 2026-03-23 11:00:57,716 Calculating time from 4.829e-02 to be 5.770e+15 seconds
+yt : [INFO     ] 2026-03-23 11:00:57,747 Parameters: current_time              = 5769865390432466.0 s
+yt : [INFO     ] 2026-03-23 11:00:57,748 Parameters: domain_dimensions         = [1 1 1]
+yt : [INFO     ] 2026-03-23 11:00:57,748 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2026-03-23 11:00:57,748 Parameters: domain_right_edge         = [40000. 40000. 40000.]
+yt : [INFO     ] 2026-03-23 11:00:57,748 Parameters: cosmological_simulation   = True
+yt : [INFO     ] 2026-03-23 11:00:57,748 Parameters: current_redshift          = 19.709710413622368
+yt : [INFO     ] 2026-03-23 11:00:57,748 Parameters: omega_lambda              = 0.685
+yt : [INFO     ] 2026-03-23 11:00:57,748 Parameters: omega_matter              = 0.315
+yt : [INFO     ] 2026-03-23 11:00:57,748 Parameters: omega_radiation           = 0.0
+yt : [INFO     ] 2026-03-23 11:00:57,748 Parameters: hubble_constant           = 0.674
+yt : [INFO     ] 2026-03-23 11:00:57,926 Allocating for 5.785e+07 particles
+Loading particle index:   0%|          | 0/128 [00:00<?, ?it/s]Loading particle index:  52%|█████▏    | 66/128 [00:00<00:00, 655.93it/s]Loading particle index: 100%|██████████| 128/128 [00:00<00:00, 606.55it/s]
+[11:00:58] INFO: [Snapshot 89] Unique galaxies: 1
+[11:00:58] INFO: [Snapshot 84] Preloading particle fields...
+[11:01:02] INFO: [Snapshot 84] Unique galaxies: 1
+[11:01:03] INFO: [Snapshot 92] Loading snapshot...
+[11:01:04] INFO: [Snapshot 91] Preloading particle fields...
+yt : [INFO     ] 2026-03-23 11:01:05,688 Calculating time from 5.115e-02 to be 6.290e+15 seconds
+yt : [INFO     ] 2026-03-23 11:01:05,730 Parameters: current_time              = 6289736843011771.0 s
+yt : [INFO     ] 2026-03-23 11:01:05,731 Parameters: domain_dimensions         = [1 1 1]
+yt : [INFO     ] 2026-03-23 11:01:05,731 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2026-03-23 11:01:05,731 Parameters: domain_right_edge         = [40000. 40000. 40000.]
+yt : [INFO     ] 2026-03-23 11:01:05,731 Parameters: cosmological_simulation   = True
+yt : [INFO     ] 2026-03-23 11:01:05,731 Parameters: current_redshift          = 18.552124037863244
+yt : [INFO     ] 2026-03-23 11:01:05,731 Parameters: omega_lambda              = 0.685
+yt : [INFO     ] 2026-03-23 11:01:05,731 Parameters: omega_matter              = 0.315
+yt : [INFO     ] 2026-03-23 11:01:05,731 Parameters: omega_radiation           = 0.0
+yt : [INFO     ] 2026-03-23 11:01:05,731 Parameters: hubble_constant           = 0.674
+yt : [INFO     ] 2026-03-23 11:01:05,918 Allocating for 5.818e+07 particles
+Loading particle index:   0%|          | 0/128 [00:00<?, ?it/s]Loading particle index:  50%|█████     | 64/128 [00:00<00:00, 634.70it/s]Loading particle index: 100%|██████████| 128/128 [00:00<00:00, 622.86it/s]Loading particle index: 100%|██████████| 128/128 [00:00<00:00, 620.46it/s]
+[11:01:06] INFO: [Snapshot 89] Loading snapshot...
+yt : [INFO     ] 2026-03-23 11:01:06,943 Calculating time from 4.993e-02 to be 6.068e+15 seconds
+yt : [INFO     ] 2026-03-23 11:01:06,974 Parameters: current_time              = 6067662015150347.0 s
+yt : [INFO     ] 2026-03-23 11:01:06,974 Parameters: domain_dimensions         = [1 1 1]
+yt : [INFO     ] 2026-03-23 11:01:06,974 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2026-03-23 11:01:06,974 Parameters: domain_right_edge         = [40000. 40000. 40000.]
+yt : [INFO     ] 2026-03-23 11:01:06,974 Parameters: cosmological_simulation   = True
+yt : [INFO     ] 2026-03-23 11:01:06,974 Parameters: current_redshift          = 19.026373487165625
+yt : [INFO     ] 2026-03-23 11:01:06,974 Parameters: omega_lambda              = 0.685
+yt : [INFO     ] 2026-03-23 11:01:06,974 Parameters: omega_matter              = 0.315
+yt : [INFO     ] 2026-03-23 11:01:06,974 Parameters: omega_radiation           = 0.0
+yt : [INFO     ] 2026-03-23 11:01:06,974 Parameters: hubble_constant           = 0.674
+yt : [INFO     ] 2026-03-23 11:01:07,159 Allocating for 5.805e+07 particles
+
+------ DEBUG SNAPSHOT 89  GALAXY 8  ------
+z = 19.026373487165625
+BH id: 102573735
+BH Type: MBH
+Sink position (code units): [(20015.910177339487, 20139.559496560596, 19633.40342770317)]
+Center (code units): [19992.95968233 20096.60732711 19705.45484521]
+Center (kpc): [1481.20422185 1488.88309139 1459.90405493]
+BH StellarMass (code): 0.002501391124038771
+BH Mass (Msun): 37112627.95309749
+Metallicity mass-weighted: 0.21811935342792835
+Metallicity min: 1.3299197606454803e-06
+Metallicity max: 32.112857207634406
+Gas mass: 56199358.98643245
+Loading particle index:   0%|          | 0/128 [00:00<?, ?it/s]Loading particle index:  52%|█████▏    | 66/128 [00:00<00:00, 655.58it/s]Loading particle index: 100%|██████████| 128/128 [00:00<00:00, 634.36it/s]
+[11:01:07] INFO: [Snapshot 89] Preloading particle fields...
+[11:01:08] INFO: [Snapshot 91] Unique galaxies: 1
+[11:01:11] INFO: [Snapshot 85] Loading snapshot...
+yt : [INFO     ] 2026-03-23 11:01:11,477 Calculating time from 4.875e-02 to be 5.853e+15 seconds
+yt : [INFO     ] 2026-03-23 11:01:11,508 Parameters: current_time              = 5853426726191289.0 s
+yt : [INFO     ] 2026-03-23 11:01:11,508 Parameters: domain_dimensions         = [1 1 1]
+yt : [INFO     ] 2026-03-23 11:01:11,508 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2026-03-23 11:01:11,508 Parameters: domain_right_edge         = [40000. 40000. 40000.]
+yt : [INFO     ] 2026-03-23 11:01:11,508 Parameters: cosmological_simulation   = True
+yt : [INFO     ] 2026-03-23 11:01:11,508 Parameters: current_redshift          = 19.512126164440996
+yt : [INFO     ] 2026-03-23 11:01:11,508 Parameters: omega_lambda              = 0.685
+yt : [INFO     ] 2026-03-23 11:01:11,508 Parameters: omega_matter              = 0.315
+yt : [INFO     ] 2026-03-23 11:01:11,508 Parameters: omega_radiation           = 0.0
+yt : [INFO     ] 2026-03-23 11:01:11,508 Parameters: hubble_constant           = 0.674
+yt : [INFO     ] 2026-03-23 11:01:11,691 Allocating for 5.792e+07 particles
+
+------ DEBUG SNAPSHOT 84  GALAXY 1  ------
+z = 19.709710413622368
+BH id: 102573735
+BH Type: MBH
+Sink position (code units): [(20015.910177339487, 20139.559496560596, 19633.40342770317)]
+Center (code units): [19991.3844044  20095.26365836 19716.3063559 ]
+Center (kpc): [1432.21760021 1439.6596909  1412.51052968]
+BH StellarMass (code): 0.002501391124038771
+BH Mass (Msun): 37112627.95309749
+Metallicity mass-weighted: 0.21679958155757353
+Metallicity min: 7.133395039279492e-07
+Metallicity max: 23.52557618752599
+Gas mass: 44754469.22358518
+Loading particle index:   0%|          | 0/128 [00:00<?, ?it/s]Loading particle index:  52%|█████▏    | 66/128 [00:00<00:00, 648.50it/s]Loading particle index: 100%|██████████| 128/128 [00:00<00:00, 619.60it/s]
+[11:01:12] INFO: [Snapshot 89] Unique galaxies: 1
+[11:01:12] INFO: [Snapshot 85] Preloading particle fields...
+[11:01:13] INFO: [Snapshot 92] Preloading particle fields...
+[11:01:16] INFO: [Snapshot 85] Unique galaxies: 1
+[11:01:17] WARNING: [Snapshot 91] BH id 102934620 not found in sinks. Skipping galaxy 16.
+[11:01:17] INFO: [Snapshot 91] Loading snapshot...
+yt : [INFO     ] 2026-03-23 11:01:17,041 Calculating time from 5.066e-02 to be 6.200e+15 seconds
+yt : [INFO     ] 2026-03-23 11:01:17,071 Parameters: current_time              = 6199948048444915.0 s
+yt : [INFO     ] 2026-03-23 11:01:17,071 Parameters: domain_dimensions         = [1 1 1]
+yt : [INFO     ] 2026-03-23 11:01:17,071 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2026-03-23 11:01:17,072 Parameters: domain_right_edge         = [40000. 40000. 40000.]
+yt : [INFO     ] 2026-03-23 11:01:17,072 Parameters: cosmological_simulation   = True
+yt : [INFO     ] 2026-03-23 11:01:17,072 Parameters: current_redshift          = 18.740461010683706
+yt : [INFO     ] 2026-03-23 11:01:17,072 Parameters: omega_lambda              = 0.685
+yt : [INFO     ] 2026-03-23 11:01:17,072 Parameters: omega_matter              = 0.315
+yt : [INFO     ] 2026-03-23 11:01:17,072 Parameters: omega_radiation           = 0.0
+yt : [INFO     ] 2026-03-23 11:01:17,072 Parameters: hubble_constant           = 0.674
+yt : [INFO     ] 2026-03-23 11:01:17,256 Allocating for 5.812e+07 particles
+Loading particle index:   0%|          | 0/128 [00:00<?, ?it/s]Loading particle index:  52%|█████▏    | 66/128 [00:00<00:00, 651.55it/s]Loading particle index: 100%|██████████| 128/128 [00:00<00:00, 623.44it/s]
+[11:01:17] INFO: [Snapshot 92] Unique galaxies: 1
+[11:01:17] INFO: [Snapshot 91] Preloading particle fields...
+[11:01:18] INFO: [Snapshot 96] Loading snapshot...
+[11:01:20] WARNING: [Snapshot 89] BH id 98248981 not found in sinks. Skipping galaxy 9.
+[11:01:20] INFO: [Snapshot 89] Loading snapshot...
+yt : [INFO     ] 2026-03-23 11:01:20,925 Calculating time from 4.993e-02 to be 6.068e+15 seconds
+yt : [INFO     ] 2026-03-23 11:01:20,951 Parameters: current_time              = 6067662015150347.0 s
+yt : [INFO     ] 2026-03-23 11:01:20,951 Parameters: domain_dimensions         = [1 1 1]
+yt : [INFO     ] 2026-03-23 11:01:20,951 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2026-03-23 11:01:20,951 Parameters: domain_right_edge         = [40000. 40000. 40000.]
+yt : [INFO     ] 2026-03-23 11:01:20,951 Parameters: cosmological_simulation   = True
+yt : [INFO     ] 2026-03-23 11:01:20,951 Parameters: current_redshift          = 19.026373487165625
+yt : [INFO     ] 2026-03-23 11:01:20,952 Parameters: omega_lambda              = 0.685
+yt : [INFO     ] 2026-03-23 11:01:20,952 Parameters: omega_matter              = 0.315
+yt : [INFO     ] 2026-03-23 11:01:20,952 Parameters: omega_radiation           = 0.0
+yt : [INFO     ] 2026-03-23 11:01:20,952 Parameters: hubble_constant           = 0.674
+yt : [INFO     ] 2026-03-23 11:01:20,976 Calculating time from 5.239e-02 to be 6.520e+15 seconds
+yt : [INFO     ] 2026-03-23 11:01:21,019 Parameters: current_time              = 6519937915966620.0 s
+yt : [INFO     ] 2026-03-23 11:01:21,019 Parameters: domain_dimensions         = [1 1 1]
+yt : [INFO     ] 2026-03-23 11:01:21,019 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2026-03-23 11:01:21,020 Parameters: domain_right_edge         = [40000. 40000. 40000.]
+yt : [INFO     ] 2026-03-23 11:01:21,020 Parameters: cosmological_simulation   = True
+yt : [INFO     ] 2026-03-23 11:01:21,020 Parameters: current_redshift          = 18.089105405778355
+yt : [INFO     ] 2026-03-23 11:01:21,020 Parameters: omega_lambda              = 0.685
+yt : [INFO     ] 2026-03-23 11:01:21,020 Parameters: omega_matter              = 0.315
+yt : [INFO     ] 2026-03-23 11:01:21,020 Parameters: omega_radiation           = 0.0
+yt : [INFO     ] 2026-03-23 11:01:21,020 Parameters: hubble_constant           = 0.674
+yt : [INFO     ] 2026-03-23 11:01:21,135 Allocating for 5.805e+07 particles
+Loading particle index:   0%|          | 0/128 [00:00<?, ?it/s]Loading particle index:  52%|█████▏    | 67/128 [00:00<00:00, 660.72it/s]yt : [INFO     ] 2026-03-23 11:01:21,324 Allocating for 5.832e+07 particles
+Loading particle index:   0%|          | 0/128 [00:00<?, ?it/s]Loading particle index: 100%|██████████| 128/128 [00:00<00:00, 635.81it/s]
+Loading particle index:  48%|████▊     | 61/128 [00:00<00:00, 608.11it/s]Loading particle index:  95%|█████████▌| 122/128 [00:00<00:00, 587.56it/s]Loading particle index: 100%|██████████| 128/128 [00:00<00:00, 586.48it/s]
+[11:01:21] INFO: [Snapshot 89] Preloading particle fields...
+[11:01:22] INFO: [Snapshot 91] Unique galaxies: 1
+[11:01:24] INFO: [Snapshot 86] Loading snapshot...
+yt : [INFO     ] 2026-03-23 11:01:24,924 Calculating time from 4.899e-02 to be 5.896e+15 seconds
+yt : [INFO     ] 2026-03-23 11:01:24,955 Parameters: current_time              = 5895660040531033.0 s
+yt : [INFO     ] 2026-03-23 11:01:24,955 Parameters: domain_dimensions         = [1 1 1]
+yt : [INFO     ] 2026-03-23 11:01:24,955 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2026-03-23 11:01:24,955 Parameters: domain_right_edge         = [40000. 40000. 40000.]
+yt : [INFO     ] 2026-03-23 11:01:24,955 Parameters: cosmological_simulation   = True
+yt : [INFO     ] 2026-03-23 11:01:24,955 Parameters: current_redshift          = 19.414042074300877
+yt : [INFO     ] 2026-03-23 11:01:24,955 Parameters: omega_lambda              = 0.685
+yt : [INFO     ] 2026-03-23 11:01:24,955 Parameters: omega_matter              = 0.315
+yt : [INFO     ] 2026-03-23 11:01:24,955 Parameters: omega_radiation           = 0.0
+yt : [INFO     ] 2026-03-23 11:01:24,955 Parameters: hubble_constant           = 0.674
+yt : [INFO     ] 2026-03-23 11:01:25,134 Allocating for 5.795e+07 particles
+
+------ DEBUG SNAPSHOT 85  GALAXY 2  ------
+z = 19.512126164440996
+BH id: 102573735
+BH Type: MBH
+Sink position (code units): [(20015.910177339487, 20139.559496560596, 19633.40342770317)]
+Center (code units): [19992.39485968 20095.32511328 19713.17639744]
+Center (kpc): [1446.08660769 1453.53174182 1425.89022393]
+BH StellarMass (code): 0.002501391124038771
+BH Mass (Msun): 37112627.95309749
+Metallicity mass-weighted: 0.2112866144595456
+Metallicity min: 1.935962136060778e-06
+Metallicity max: 20.571944262508506
+Gas mass: 48403711.27545982
+Loading particle index:   0%|          | 0/128 [00:00<?, ?it/s]Loading particle index:  52%|█████▏    | 66/128 [00:00<00:00, 651.58it/s]Loading particle index: 100%|██████████| 128/128 [00:00<00:00, 624.87it/s]
+[11:01:25] INFO: [Snapshot 86] Preloading particle fields...
+[11:01:26] INFO: [Snapshot 89] Unique galaxies: 1
+[11:01:26] WARNING: [Snapshot 92] BH id 128914612 not found in sinks. Skipping galaxy 24.
+[11:01:26] INFO: [Snapshot 94] Loading snapshot...
+yt : [INFO     ] 2026-03-23 11:01:26,253 Calculating time from 5.164e-02 to be 6.381e+15 seconds
+yt : [INFO     ] 2026-03-23 11:01:26,284 Parameters: current_time              = 6380825719589235.0 s
+yt : [INFO     ] 2026-03-23 11:01:26,284 Parameters: domain_dimensions         = [1 1 1]
+yt : [INFO     ] 2026-03-23 11:01:26,285 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2026-03-23 11:01:26,285 Parameters: domain_right_edge         = [40000. 40000. 40000.]
+yt : [INFO     ] 2026-03-23 11:01:26,285 Parameters: cosmological_simulation   = True
+yt : [INFO     ] 2026-03-23 11:01:26,285 Parameters: current_redshift          = 18.365583923551405
+yt : [INFO     ] 2026-03-23 11:01:26,285 Parameters: omega_lambda              = 0.685
+yt : [INFO     ] 2026-03-23 11:01:26,285 Parameters: omega_matter              = 0.315
+yt : [INFO     ] 2026-03-23 11:01:26,285 Parameters: omega_radiation           = 0.0
+yt : [INFO     ] 2026-03-23 11:01:26,285 Parameters: hubble_constant           = 0.674
+yt : [INFO     ] 2026-03-23 11:01:26,468 Allocating for 5.824e+07 particles
+Loading particle index:   0%|          | 0/128 [00:00<?, ?it/s]Loading particle index:  52%|█████▏    | 67/128 [00:00<00:00, 662.96it/s]Loading particle index: 100%|██████████| 128/128 [00:00<00:00, 633.11it/s]
+[11:01:27] INFO: [Snapshot 94] Preloading particle fields...
+[11:01:28] INFO: [Snapshot 98] Loading snapshot...
+[11:01:28] INFO: [Snapshot 96] Preloading particle fields...
+[11:01:30] INFO: [Snapshot 86] Unique galaxies: 1
+[11:01:30] INFO: [Snapshot 91] Loading snapshot...
+yt : [INFO     ] 2026-03-23 11:01:30,788 Calculating time from 5.066e-02 to be 6.200e+15 seconds
+yt : [INFO     ] 2026-03-23 11:01:30,802 Calculating time from 5.314e-02 to be 6.662e+15 seconds
+yt : [INFO     ] 2026-03-23 11:01:30,813 Parameters: current_time              = 6199948048444915.0 s
+yt : [INFO     ] 2026-03-23 11:01:30,813 Parameters: domain_dimensions         = [1 1 1]
+yt : [INFO     ] 2026-03-23 11:01:30,814 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2026-03-23 11:01:30,814 Parameters: domain_right_edge         = [40000. 40000. 40000.]
+yt : [INFO     ] 2026-03-23 11:01:30,814 Parameters: cosmological_simulation   = True
+yt : [INFO     ] 2026-03-23 11:01:30,814 Parameters: current_redshift          = 18.740461010683706
+yt : [INFO     ] 2026-03-23 11:01:30,814 Parameters: omega_lambda              = 0.685
+yt : [INFO     ] 2026-03-23 11:01:30,814 Parameters: omega_matter              = 0.315
+yt : [INFO     ] 2026-03-23 11:01:30,814 Parameters: omega_radiation           = 0.0
+yt : [INFO     ] 2026-03-23 11:01:30,814 Parameters: hubble_constant           = 0.674
+yt : [INFO     ] 2026-03-23 11:01:30,845 Parameters: current_time              = 6662082334475839.0 s
+yt : [INFO     ] 2026-03-23 11:01:30,845 Parameters: domain_dimensions         = [1 1 1]
+yt : [INFO     ] 2026-03-23 11:01:30,845 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2026-03-23 11:01:30,845 Parameters: domain_right_edge         = [40000. 40000. 40000.]
+yt : [INFO     ] 2026-03-23 11:01:30,845 Parameters: cosmological_simulation   = True
+yt : [INFO     ] 2026-03-23 11:01:30,845 Parameters: current_redshift          = 17.816574115782778
+yt : [INFO     ] 2026-03-23 11:01:30,845 Parameters: omega_lambda              = 0.685
+yt : [INFO     ] 2026-03-23 11:01:30,845 Parameters: omega_matter              = 0.315
+yt : [INFO     ] 2026-03-23 11:01:30,845 Parameters: omega_radiation           = 0.0
+yt : [INFO     ] 2026-03-23 11:01:30,845 Parameters: hubble_constant           = 0.674
+yt : [INFO     ] 2026-03-23 11:01:30,996 Allocating for 5.812e+07 particles
+
+------ DEBUG SNAPSHOT 91  GALAXY 17  ------
+z = 18.740461010683706
+BH id: 123556637
+BH Type: MBH
+Sink position (code units): [(20015.995694503268, 20139.381471569774, 19633.28067807003)]
+Center (code units): [19994.05047427 20099.49988386 19700.84348384]
+Center (kpc): [1502.73933964 1510.6648461  1480.70210013]
+BH StellarMass (code): 0.001654043851100842
+BH Mass (Msun): 24540709.956985787
+Metallicity mass-weighted: 0.21863267533790987
+Metallicity min: 4.331367563224724e-06
+Metallicity max: 34.620681301528364
+Gas mass: 51151640.35839408
+Loading particle index:   0%|          | 0/128 [00:00<?, ?it/s]yt : [INFO     ] 2026-03-23 11:01:31,035 Allocating for 5.837e+07 particles
+Loading particle index:   0%|          | 0/128 [00:00<?, ?it/s]Loading particle index:  51%|█████     | 65/128 [00:00<00:00, 647.82it/s]Loading particle index:  50%|█████     | 64/128 [00:00<00:00, 632.97it/s]Loading particle index: 100%|██████████| 128/128 [00:00<00:00, 626.49it/s]
+Loading particle index: 100%|██████████| 128/128 [00:00<00:00, 611.33it/s]Loading particle index: 100%|██████████| 128/128 [00:00<00:00, 609.44it/s]
+[11:01:31] INFO: [Snapshot 94] Unique galaxies: 1
+[11:01:31] INFO: [Snapshot 91] Preloading particle fields...
+[11:01:34] INFO: [Snapshot 96] Unique galaxies: 1
+[11:01:34] INFO: [Snapshot 90] Loading snapshot...
+yt : [INFO     ] 2026-03-23 11:01:34,815 Calculating time from 5.042e-02 to be 6.156e+15 seconds
+yt : [INFO     ] 2026-03-23 11:01:34,846 Parameters: current_time              = 6155535376193548.0 s
+yt : [INFO     ] 2026-03-23 11:01:34,846 Parameters: domain_dimensions         = [1 1 1]
+yt : [INFO     ] 2026-03-23 11:01:34,847 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2026-03-23 11:01:34,847 Parameters: domain_right_edge         = [40000. 40000. 40000.]
+yt : [INFO     ] 2026-03-23 11:01:34,847 Parameters: cosmological_simulation   = True
+yt : [INFO     ] 2026-03-23 11:01:34,847 Parameters: current_redshift          = 18.835308721398327
+yt : [INFO     ] 2026-03-23 11:01:34,847 Parameters: omega_lambda              = 0.685
+yt : [INFO     ] 2026-03-23 11:01:34,847 Parameters: omega_matter              = 0.315
+yt : [INFO     ] 2026-03-23 11:01:34,847 Parameters: omega_radiation           = 0.0
+yt : [INFO     ] 2026-03-23 11:01:34,847 Parameters: hubble_constant           = 0.674
+yt : [INFO     ] 2026-03-23 11:01:35,028 Allocating for 5.809e+07 particles
+
+------ DEBUG SNAPSHOT 89  GALAXY 10  ------
+z = 19.026373487165625
+BH id: 116804037
+BH Type: MBH
+Sink position (code units): [(19998.02958991343, 20105.420961353244, 19688.8371926418)]
+Center (code units): [19993.06961773 20096.31182029 19705.34253083]
+Center (kpc): [1481.21236656 1488.86119838 1459.89573397]
+BH StellarMass (code): 0.00012556978436087504
+BH Mass (Msun): 1863053.180428413
+Metallicity mass-weighted: 0.2181077516081985
+Metallicity min: 1.3299197606454803e-06
+Metallicity max: 28.47495073037467
+Gas mass: 56227095.91097745
+Loading particle index:   0%|          | 0/128 [00:00<?, ?it/s]Loading particle index:  52%|█████▏    | 66/128 [00:00<00:00, 651.27it/s]Loading particle index: 100%|██████████| 128/128 [00:00<00:00, 629.45it/s]
+[11:01:35] INFO: [Snapshot 90] Preloading particle fields...
+[11:01:35] INFO: [Snapshot 91] Unique galaxies: 1
+[11:01:37] INFO: [Snapshot 100] Loading snapshot...
+[11:01:38] INFO: [Snapshot 86] Loading snapshot...
+yt : [INFO     ] 2026-03-23 11:01:38,724 Calculating time from 4.899e-02 to be 5.896e+15 seconds
+[11:01:38] INFO: [Snapshot 98] Preloading particle fields...
+yt : [INFO     ] 2026-03-23 11:01:38,754 Parameters: current_time              = 5895660040531033.0 s
+yt : [INFO     ] 2026-03-23 11:01:38,754 Parameters: domain_dimensions         = [1 1 1]
+yt : [INFO     ] 2026-03-23 11:01:38,754 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2026-03-23 11:01:38,754 Parameters: domain_right_edge         = [40000. 40000. 40000.]
+yt : [INFO     ] 2026-03-23 11:01:38,754 Parameters: cosmological_simulation   = True
+yt : [INFO     ] 2026-03-23 11:01:38,754 Parameters: current_redshift          = 19.414042074300877
+yt : [INFO     ] 2026-03-23 11:01:38,754 Parameters: omega_lambda              = 0.685
+yt : [INFO     ] 2026-03-23 11:01:38,754 Parameters: omega_matter              = 0.315
+yt : [INFO     ] 2026-03-23 11:01:38,754 Parameters: omega_radiation           = 0.0
+yt : [INFO     ] 2026-03-23 11:01:38,754 Parameters: hubble_constant           = 0.674
+yt : [INFO     ] 2026-03-23 11:01:38,934 Allocating for 5.795e+07 particles
+
+------ DEBUG SNAPSHOT 86  GALAXY 3  ------
+z = 19.414042074300877
+BH id: 104677365
+BH Type: MBH
+Sink position (code units): [(20016.134735325923, 20139.56036562441, 19633.44692041647)]
+Center (code units): [19991.67224551 20096.42299728 19711.5959892 ]
+Center (kpc): [1452.98215345 1460.59537214 1432.62638745]
+BH StellarMass (code): 0.0006641801421413625
+BH Mass (Msun): 9854304.779545438
+Metallicity mass-weighted: 0.21388234880107668
+Metallicity min: 7.338805156878715e-07
+Metallicity max: 20.839334480106167
+Gas mass: 50476964.78500213
+Loading particle index:   0%|          | 0/128 [00:00<?, ?it/s]Loading particle index:  52%|█████▏    | 67/128 [00:00<00:00, 663.19it/s]Loading particle index: 100%|██████████| 128/128 [00:00<00:00, 621.02it/s]
+[11:01:39] INFO: [Snapshot 86] Preloading particle fields...
+[11:01:40] INFO: [Snapshot 94] Loading snapshot...
+yt : [INFO     ] 2026-03-23 11:01:40,087 Calculating time from 5.164e-02 to be 6.381e+15 seconds
+yt : [INFO     ] 2026-03-23 11:01:40,117 Parameters: current_time              = 6380825719589235.0 s
+yt : [INFO     ] 2026-03-23 11:01:40,117 Parameters: domain_dimensions         = [1 1 1]
+yt : [INFO     ] 2026-03-23 11:01:40,117 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2026-03-23 11:01:40,117 Parameters: domain_right_edge         = [40000. 40000. 40000.]
+yt : [INFO     ] 2026-03-23 11:01:40,117 Parameters: cosmological_simulation   = True
+yt : [INFO     ] 2026-03-23 11:01:40,117 Parameters: current_redshift          = 18.365583923551405
+yt : [INFO     ] 2026-03-23 11:01:40,117 Parameters: omega_lambda              = 0.685
+yt : [INFO     ] 2026-03-23 11:01:40,117 Parameters: omega_matter              = 0.315
+yt : [INFO     ] 2026-03-23 11:01:40,117 Parameters: omega_radiation           = 0.0
+yt : [INFO     ] 2026-03-23 11:01:40,117 Parameters: hubble_constant           = 0.674
+[11:01:40] INFO: [Snapshot 90] Unique galaxies: 1
+yt : [INFO     ] 2026-03-23 11:01:40,213 Calculating time from 5.391e-02 to be 6.807e+15 seconds
+yt : [INFO     ] 2026-03-23 11:01:40,255 Parameters: current_time              = 6807325025165973.0 s
+yt : [INFO     ] 2026-03-23 11:01:40,256 Parameters: domain_dimensions         = [1 1 1]
+yt : [INFO     ] 2026-03-23 11:01:40,256 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2026-03-23 11:01:40,256 Parameters: domain_right_edge         = [40000. 40000. 40000.]
+yt : [INFO     ] 2026-03-23 11:01:40,256 Parameters: cosmological_simulation   = True
+yt : [INFO     ] 2026-03-23 11:01:40,256 Parameters: current_redshift          = 17.54793369979349
+yt : [INFO     ] 2026-03-23 11:01:40,256 Parameters: omega_lambda              = 0.685
+yt : [INFO     ] 2026-03-23 11:01:40,256 Parameters: omega_matter              = 0.315
+yt : [INFO     ] 2026-03-23 11:01:40,256 Parameters: omega_radiation           = 0.0
+yt : [INFO     ] 2026-03-23 11:01:40,256 Parameters: hubble_constant           = 0.674
+yt : [INFO     ] 2026-03-23 11:01:40,300 Allocating for 5.824e+07 particles
+
+------ DEBUG SNAPSHOT 94  GALAXY 25  ------
+z = 18.365583923551405
+BH id: 102573735
+BH Type: MBH
+Sink position (code units): [(20015.910177339487, 20139.559496560596, 19633.40342770317)]
+Center (code units): [19995.42067467 20099.90576327 19695.00655991]
+Center (kpc): [1531.93419827 1539.93924518 1508.91819558]
+BH StellarMass (code): 0.002501391124038771
+BH Mass (Msun): 37112627.95309749
+Metallicity mass-weighted: 0.247843264563962
+Metallicity min: 9.239020122448835e-07
+Metallicity max: 33.9628606540922
+Gas mass: 49112522.66225741
+Loading particle index:   0%|          | 0/128 [00:00<?, ?it/s]Loading particle index:  53%|█████▎    | 68/128 [00:00<00:00, 675.88it/s]yt : [INFO     ] 2026-03-23 11:01:40,445 Allocating for 5.845e+07 particles
+Loading particle index:   0%|          | 0/128 [00:00<?, ?it/s]Loading particle index: 100%|██████████| 128/128 [00:00<00:00, 643.34it/s]
+Loading particle index:  51%|█████     | 65/128 [00:00<00:00, 646.81it/s]Loading particle index: 100%|██████████| 128/128 [00:00<00:00, 626.34it/s]
+[11:01:40] INFO: [Snapshot 94] Preloading particle fields...
+[11:01:43] INFO: [Snapshot 98] Unique galaxies: 1
+[11:01:43] INFO: [Snapshot 96] Loading snapshot...
+yt : [INFO     ] 2026-03-23 11:01:43,696 Calculating time from 5.239e-02 to be 6.520e+15 seconds
+yt : [INFO     ] 2026-03-23 11:01:43,726 Parameters: current_time              = 6519937915966620.0 s
+yt : [INFO     ] 2026-03-23 11:01:43,727 Parameters: domain_dimensions         = [1 1 1]
+yt : [INFO     ] 2026-03-23 11:01:43,731 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2026-03-23 11:01:43,731 Parameters: domain_right_edge         = [40000. 40000. 40000.]
+yt : [INFO     ] 2026-03-23 11:01:43,731 Parameters: cosmological_simulation   = True
+yt : [INFO     ] 2026-03-23 11:01:43,731 Parameters: current_redshift          = 18.089105405778355
+yt : [INFO     ] 2026-03-23 11:01:43,731 Parameters: omega_lambda              = 0.685
+yt : [INFO     ] 2026-03-23 11:01:43,731 Parameters: omega_matter              = 0.315
+yt : [INFO     ] 2026-03-23 11:01:43,731 Parameters: omega_radiation           = 0.0
+yt : [INFO     ] 2026-03-23 11:01:43,731 Parameters: hubble_constant           = 0.674
+[11:01:43] INFO: [Snapshot 86] Unique galaxies: 1
+yt : [INFO     ] 2026-03-23 11:01:43,917 Allocating for 5.832e+07 particles
+
+------ DEBUG SNAPSHOT 96  GALAXY 32  ------
+z = 18.089105405778355
+BH id: 102573735
+BH Type: MBH
+Sink position (code units): [(20015.910177339487, 20139.559496560596, 19633.40342770317)]
+Center (code units): [19997.2726795  20104.00176643 19690.48274243]
+Center (kpc): [1554.26602941 1562.56143033 1530.42111891]
+BH StellarMass (code): 0.002501391124038771
+BH Mass (Msun): 37112627.95309749
+Metallicity mass-weighted: 0.2599241869111797
+Metallicity min: 2.6668692485825346e-07
+Metallicity max: 23.713838394872305
+Gas mass: 49866240.0080863
+Loading particle index:   0%|          | 0/128 [00:00<?, ?it/s]Loading particle index:  52%|█████▏    | 67/128 [00:00<00:00, 660.13it/s]Loading particle index: 100%|██████████| 128/128 [00:00<00:00, 638.27it/s]
+[11:01:44] INFO: [Snapshot 96] Preloading particle fields...
+[11:01:44] INFO: [Snapshot 91] Loading snapshot...
+yt : [INFO     ] 2026-03-23 11:01:44,611 Calculating time from 5.066e-02 to be 6.200e+15 seconds
+yt : [INFO     ] 2026-03-23 11:01:44,634 Parameters: current_time              = 6199948048444915.0 s
+yt : [INFO     ] 2026-03-23 11:01:44,634 Parameters: domain_dimensions         = [1 1 1]
+yt : [INFO     ] 2026-03-23 11:01:44,634 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2026-03-23 11:01:44,634 Parameters: domain_right_edge         = [40000. 40000. 40000.]
+yt : [INFO     ] 2026-03-23 11:01:44,634 Parameters: cosmological_simulation   = True
+yt : [INFO     ] 2026-03-23 11:01:44,634 Parameters: current_redshift          = 18.740461010683706
+yt : [INFO     ] 2026-03-23 11:01:44,634 Parameters: omega_lambda              = 0.685
+yt : [INFO     ] 2026-03-23 11:01:44,634 Parameters: omega_matter              = 0.315
+yt : [INFO     ] 2026-03-23 11:01:44,634 Parameters: omega_radiation           = 0.0
+yt : [INFO     ] 2026-03-23 11:01:44,634 Parameters: hubble_constant           = 0.674
+yt : [INFO     ] 2026-03-23 11:01:44,816 Allocating for 5.812e+07 particles
+
+------ DEBUG SNAPSHOT 91  GALAXY 18  ------
+z = 18.740461010683706
+BH id: 119306686
+BH Type: MBH
+Sink position (code units): [(20015.60880040327, 20139.72405247638, 19633.342937705358)]
+Center (code units): [19994.21499133 20099.07284299 19700.52474112]
+Center (kpc): [1502.75170463 1510.63275    1480.67814364]
+BH StellarMass (code): 0.0013599267281481921
+BH Mass (Msun): 20176954.42356368
+Metallicity mass-weighted: 0.21890389372408234
+Metallicity min: 4.331367563224724e-06
+Metallicity max: 34.620681301528364
+Gas mass: 51225597.53540028
+Loading particle index:   0%|          | 0/128 [00:00<?, ?it/s]Loading particle index:  50%|█████     | 64/128 [00:00<00:00, 638.39it/s]Loading particle index: 100%|██████████| 128/128 [00:00<00:00, 623.04it/s]Loading particle index: 100%|██████████| 128/128 [00:00<00:00, 620.88it/s]
+[11:01:45] INFO: [Snapshot 94] Unique galaxies: 1
+[11:01:45] INFO: [Snapshot 91] Preloading particle fields...
+[11:01:47] INFO: [Snapshot 100] Preloading particle fields...
+[11:01:48] WARNING: [Snapshot 90] BH id 117559556 not found in sinks. Skipping galaxy 11.
+[11:01:48] INFO: [Snapshot 90] Loading snapshot...
+yt : [INFO     ] 2026-03-23 11:01:48,721 Calculating time from 5.042e-02 to be 6.156e+15 seconds
+yt : [INFO     ] 2026-03-23 11:01:48,751 Parameters: current_time              = 6155535376193548.0 s
+yt : [INFO     ] 2026-03-23 11:01:48,751 Parameters: domain_dimensions         = [1 1 1]
+yt : [INFO     ] 2026-03-23 11:01:48,755 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2026-03-23 11:01:48,755 Parameters: domain_right_edge         = [40000. 40000. 40000.]
+yt : [INFO     ] 2026-03-23 11:01:48,755 Parameters: cosmological_simulation   = True
+yt : [INFO     ] 2026-03-23 11:01:48,756 Parameters: current_redshift          = 18.835308721398327
+yt : [INFO     ] 2026-03-23 11:01:48,756 Parameters: omega_lambda              = 0.685
+yt : [INFO     ] 2026-03-23 11:01:48,756 Parameters: omega_matter              = 0.315
+yt : [INFO     ] 2026-03-23 11:01:48,756 Parameters: omega_radiation           = 0.0
+yt : [INFO     ] 2026-03-23 11:01:48,756 Parameters: hubble_constant           = 0.674
+[11:01:48] INFO: [Snapshot 96] Unique galaxies: 1
+yt : [INFO     ] 2026-03-23 11:01:48,943 Allocating for 5.809e+07 particles
+Loading particle index:   0%|          | 0/128 [00:00<?, ?it/s]Loading particle index:  51%|█████     | 65/128 [00:00<00:00, 643.66it/s]Loading particle index: 100%|██████████| 128/128 [00:00<00:00, 631.60it/s]
+[11:01:49] INFO: [Snapshot 90] Preloading particle fields...
+[11:01:49] INFO: [Snapshot 91] Unique galaxies: 1
+[11:01:52] INFO: [Snapshot 100] Unique galaxies: 1
+[11:01:52] INFO: [Snapshot 86] Loading snapshot...
+yt : [INFO     ] 2026-03-23 11:01:52,473 Calculating time from 4.899e-02 to be 5.896e+15 seconds
+yt : [INFO     ] 2026-03-23 11:01:52,499 Parameters: current_time              = 5895660040531033.0 s
+yt : [INFO     ] 2026-03-23 11:01:52,499 Parameters: domain_dimensions         = [1 1 1]
+yt : [INFO     ] 2026-03-23 11:01:52,499 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2026-03-23 11:01:52,499 Parameters: domain_right_edge         = [40000. 40000. 40000.]
+yt : [INFO     ] 2026-03-23 11:01:52,499 Parameters: cosmological_simulation   = True
+yt : [INFO     ] 2026-03-23 11:01:52,499 Parameters: current_redshift          = 19.414042074300877
+yt : [INFO     ] 2026-03-23 11:01:52,499 Parameters: omega_lambda              = 0.685
+yt : [INFO     ] 2026-03-23 11:01:52,499 Parameters: omega_matter              = 0.315
+yt : [INFO     ] 2026-03-23 11:01:52,499 Parameters: omega_radiation           = 0.0
+yt : [INFO     ] 2026-03-23 11:01:52,499 Parameters: hubble_constant           = 0.674
+yt : [INFO     ] 2026-03-23 11:01:52,679 Allocating for 5.795e+07 particles
+
+------ DEBUG SNAPSHOT 86  GALAXY 4  ------
+z = 19.414042074300877
+BH id: 104677365
+BH Type: MBH
+Sink position (code units): [(20016.134735325923, 20139.56036562441, 19633.44692041647)]
+Center (code units): [19991.67224551 20096.42299728 19711.5959892 ]
+Center (kpc): [1452.98215345 1460.59537214 1432.62638745]
+BH StellarMass (code): 0.0006641801421413625
+BH Mass (Msun): 9854304.779545438
+Metallicity mass-weighted: 0.21388234880107668
+Metallicity min: 7.338805156878715e-07
+Metallicity max: 20.839334480106167
+Gas mass: 50476964.78500213
+Loading particle index:   0%|          | 0/128 [00:00<?, ?it/s]Loading particle index:  52%|█████▏    | 66/128 [00:00<00:00, 649.28it/s]Loading particle index: 100%|██████████| 128/128 [00:00<00:00, 625.95it/s]
+[11:01:53] INFO: [Snapshot 86] Preloading particle fields...
+[11:01:53] WARNING: [Snapshot 94] BH id 118591246 not found in sinks. Skipping galaxy 26.
+[11:01:53] INFO: [Snapshot 94] Loading snapshot...
+[11:01:53] INFO: [Snapshot 90] Unique galaxies: 1
+yt : [INFO     ] 2026-03-23 11:01:53,929 Calculating time from 5.164e-02 to be 6.381e+15 seconds
+yt : [INFO     ] 2026-03-23 11:01:53,954 Parameters: current_time              = 6380825719589235.0 s
+yt : [INFO     ] 2026-03-23 11:01:53,955 Parameters: domain_dimensions         = [1 1 1]
+yt : [INFO     ] 2026-03-23 11:01:53,955 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2026-03-23 11:01:53,955 Parameters: domain_right_edge         = [40000. 40000. 40000.]
+yt : [INFO     ] 2026-03-23 11:01:53,955 Parameters: cosmological_simulation   = True
+yt : [INFO     ] 2026-03-23 11:01:53,955 Parameters: current_redshift          = 18.365583923551405
+yt : [INFO     ] 2026-03-23 11:01:53,955 Parameters: omega_lambda              = 0.685
+yt : [INFO     ] 2026-03-23 11:01:53,955 Parameters: omega_matter              = 0.315
+yt : [INFO     ] 2026-03-23 11:01:53,955 Parameters: omega_radiation           = 0.0
+yt : [INFO     ] 2026-03-23 11:01:53,955 Parameters: hubble_constant           = 0.674
+yt : [INFO     ] 2026-03-23 11:01:54,136 Allocating for 5.824e+07 particles
+Loading particle index:   0%|          | 0/128 [00:00<?, ?it/s]Loading particle index:  53%|█████▎    | 68/128 [00:00<00:00, 679.04it/s]Loading particle index: 100%|██████████| 128/128 [00:00<00:00, 641.61it/s]
+[11:01:54] WARNING: [Snapshot 98] BH id 126238859 not found in sinks. Skipping galaxy 40.
+[11:01:54] INFO: [Snapshot 98] Loading snapshot...
+yt : [INFO     ] 2026-03-23 11:01:54,509 Calculating time from 5.314e-02 to be 6.662e+15 seconds
+yt : [INFO     ] 2026-03-23 11:01:54,761 Parameters: current_time              = 6662082334475839.0 s
+yt : [INFO     ] 2026-03-23 11:01:54,762 Parameters: domain_dimensions         = [1 1 1]
+yt : [INFO     ] 2026-03-23 11:01:54,763 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2026-03-23 11:01:54,764 Parameters: domain_right_edge         = [40000. 40000. 40000.]
+yt : [INFO     ] 2026-03-23 11:01:54,765 Parameters: cosmological_simulation   = True
+yt : [INFO     ] 2026-03-23 11:01:54,765 Parameters: current_redshift          = 17.816574115782778
+yt : [INFO     ] 2026-03-23 11:01:54,765 Parameters: omega_lambda              = 0.685
+yt : [INFO     ] 2026-03-23 11:01:54,766 Parameters: omega_matter              = 0.315
+yt : [INFO     ] 2026-03-23 11:01:54,766 Parameters: omega_radiation           = 0.0
+yt : [INFO     ] 2026-03-23 11:01:54,766 Parameters: hubble_constant           = 0.674
+[11:01:54] INFO: [Snapshot 94] Preloading particle fields...
+yt : [INFO     ] 2026-03-23 11:01:56,255 Allocating for 5.837e+07 particles
+Loading particle index:   0%|          | 0/128 [00:00<?, ?it/s]Loading particle index:  11%|█         | 14/128 [00:00<00:00, 137.92it/s]Loading particle index:  22%|██▏       | 28/128 [00:00<00:01, 89.41it/s] Loading particle index:  30%|██▉       | 38/128 [00:00<00:01, 80.28it/s]Loading particle index:  37%|███▋      | 47/128 [00:00<00:01, 67.23it/s]Loading particle index:  43%|████▎     | 55/128 [00:00<00:01, 66.53it/s]Loading particle index:  49%|████▉     | 63/128 [00:00<00:00, 67.25it/s]Loading particle index:  55%|█████▍    | 70/128 [00:00<00:00, 67.66it/s]Loading particle index:  60%|██████    | 77/128 [00:01<00:00, 67.69it/s][11:01:57] INFO: [Snapshot 96] Loading snapshot...
+yt : [INFO     ] 2026-03-23 11:01:57,495 Calculating time from 5.239e-02 to be 6.520e+15 seconds
+yt : [INFO     ] 2026-03-23 11:01:57,522 Parameters: current_time              = 6519937915966620.0 s
+yt : [INFO     ] 2026-03-23 11:01:57,522 Parameters: domain_dimensions         = [1 1 1]
+yt : [INFO     ] 2026-03-23 11:01:57,523 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2026-03-23 11:01:57,523 Parameters: domain_right_edge         = [40000. 40000. 40000.]
+yt : [INFO     ] 2026-03-23 11:01:57,523 Parameters: cosmological_simulation   = True
+yt : [INFO     ] 2026-03-23 11:01:57,523 Parameters: current_redshift          = 18.089105405778355
+yt : [INFO     ] 2026-03-23 11:01:57,523 Parameters: omega_lambda              = 0.685
+yt : [INFO     ] 2026-03-23 11:01:57,523 Parameters: omega_matter              = 0.315
+yt : [INFO     ] 2026-03-23 11:01:57,523 Parameters: omega_radiation           = 0.0
+yt : [INFO     ] 2026-03-23 11:01:57,523 Parameters: hubble_constant           = 0.674
+Loading particle index:  66%|██████▌   | 84/128 [00:01<00:00, 65.86it/s]Loading particle index:  71%|███████   | 91/128 [00:01<00:00, 66.72it/s]yt : [INFO     ] 2026-03-23 11:01:57,705 Allocating for 5.832e+07 particles
+
+------ DEBUG SNAPSHOT 96  GALAXY 33  ------
+z = 18.089105405778355
+BH id: 102693011
+BH Type: MBH
+Sink position (code units): [(20016.029002518593, 20139.777910373785, 19633.600442276856)]
+Center (code units): [19997.09900526 20104.15787394 19690.39281986]
+Center (kpc): [1554.25253077 1562.57356361 1530.41412977]
+BH StellarMass (code): 0.0010787875319753957
+BH Mass (Msun): 16005749.732572636
+Metallicity mass-weighted: 0.25575496684343235
+Metallicity min: 2.6668692485825346e-07
+Metallicity max: 23.713838394872305
+Gas mass: 49707932.535226464
+Loading particle index:   0%|          | 0/128 [00:00<?, ?it/s]Loading particle index:  77%|███████▋  | 99/128 [00:01<00:00, 68.68it/s]Loading particle index:  53%|█████▎    | 68/128 [00:00<00:00, 673.05it/s][11:01:57] INFO: [Snapshot 86] Unique galaxies: 1
+Loading particle index:  84%|████████▎ | 107/128 [00:01<00:00, 69.88it/s]Loading particle index: 100%|██████████| 128/128 [00:00<00:00, 636.10it/s]
+Loading particle index:  91%|█████████ | 116/128 [00:01<00:00, 73.78it/s]Loading particle index:  98%|█████████▊| 125/128 [00:01<00:00, 76.59it/s][11:01:58] INFO: [Snapshot 92] Loading snapshot...
+yt : [INFO     ] 2026-03-23 11:01:58,127 Calculating time from 5.115e-02 to be 6.290e+15 seconds
+Loading particle index: 100%|██████████| 128/128 [00:01<00:00, 72.53it/s]
+yt : [INFO     ] 2026-03-23 11:01:58,158 Parameters: current_time              = 6289736843011771.0 s
+yt : [INFO     ] 2026-03-23 11:01:58,158 Parameters: domain_dimensions         = [1 1 1]
+yt : [INFO     ] 2026-03-23 11:01:58,159 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2026-03-23 11:01:58,159 Parameters: domain_right_edge         = [40000. 40000. 40000.]
+yt : [INFO     ] 2026-03-23 11:01:58,159 Parameters: cosmological_simulation   = True
+yt : [INFO     ] 2026-03-23 11:01:58,159 Parameters: current_redshift          = 18.552124037863244
+yt : [INFO     ] 2026-03-23 11:01:58,159 Parameters: omega_lambda              = 0.685
+yt : [INFO     ] 2026-03-23 11:01:58,159 Parameters: omega_matter              = 0.315
+yt : [INFO     ] 2026-03-23 11:01:58,159 Parameters: omega_radiation           = 0.0
+yt : [INFO     ] 2026-03-23 11:01:58,159 Parameters: hubble_constant           = 0.674
+yt : [INFO     ] 2026-03-23 11:01:58,340 Allocating for 5.818e+07 particles
+
+------ DEBUG SNAPSHOT 91  GALAXY 19  ------
+z = 18.740461010683706
+BH id: 123211090
+BH Type: MBH
+Sink position (code units): [(20146.07352047863, 20005.614193222773, 19656.09584925636)]
+Center (code units): [20145.64582248 19945.35728052 19722.65211219]
+Center (kpc): [1514.1331437  1499.07959206 1482.34122192]
+BH StellarMass (code): 5.494857120804011e-05
+BH Mass (Msun): 815260.7004160254
+Metallicity mass-weighted: 0.1715349690702302
+Metallicity min: 1e-20
+Metallicity max: 32.18548067904624
+Gas mass: 9207446.793787614
+Loading particle index:   0%|          | 0/128 [00:00<?, ?it/s][11:01:58] INFO: [Snapshot 96] Preloading particle fields...
+Loading particle index:  53%|█████▎    | 68/128 [00:00<00:00, 673.90it/s]Loading particle index: 100%|██████████| 128/128 [00:00<00:00, 640.88it/s]
+[11:01:59] INFO: [Snapshot 92] Preloading particle fields...
+[11:01:59] INFO: [Snapshot 94] Unique galaxies: 1
+[11:02:00] INFO: [Snapshot 100] Loading snapshot...
+yt : [INFO     ] 2026-03-23 11:02:00,942 Calculating time from 5.391e-02 to be 6.807e+15 seconds
+yt : [INFO     ] 2026-03-23 11:02:00,972 Parameters: current_time              = 6807325025165973.0 s
+yt : [INFO     ] 2026-03-23 11:02:00,972 Parameters: domain_dimensions         = [1 1 1]
+yt : [INFO     ] 2026-03-23 11:02:00,972 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2026-03-23 11:02:00,973 Parameters: domain_right_edge         = [40000. 40000. 40000.]
+yt : [INFO     ] 2026-03-23 11:02:00,973 Parameters: cosmological_simulation   = True
+yt : [INFO     ] 2026-03-23 11:02:00,973 Parameters: current_redshift          = 17.54793369979349
+yt : [INFO     ] 2026-03-23 11:02:00,973 Parameters: omega_lambda              = 0.685
+yt : [INFO     ] 2026-03-23 11:02:00,973 Parameters: omega_matter              = 0.315
+yt : [INFO     ] 2026-03-23 11:02:00,973 Parameters: omega_radiation           = 0.0
+yt : [INFO     ] 2026-03-23 11:02:00,973 Parameters: hubble_constant           = 0.674
+yt : [INFO     ] 2026-03-23 11:02:01,155 Allocating for 5.845e+07 particles
+
+------ DEBUG SNAPSHOT 100  GALAXY 48  ------
+z = 17.54793369979349
+BH id: 119306686
+BH Type: MBH
+Sink position (code units): [(20015.60880040327, 20139.72405247638, 19633.342937705358)]
+Center (code units): [20000.57751035 20108.65071618 19681.55874536]
+Center (kpc): [1599.87909461 1608.52404812 1574.36025884]
+BH StellarMass (code): 0.0013599267281481921
+BH Mass (Msun): 20176954.42356368
+Metallicity mass-weighted: 0.23659099480752474
+Metallicity min: 2.672251665729505e-08
+Metallicity max: 28.613819286912996
+Gas mass: 54854665.16272751
+Loading particle index:   0%|          | 0/128 [00:00<?, ?it/s]Loading particle index:  52%|█████▏    | 67/128 [00:00<00:00, 664.76it/s]Loading particle index: 100%|██████████| 128/128 [00:00<00:00, 634.47it/s]
+[11:02:01] INFO: [Snapshot 98] Preloading particle fields...
+[11:02:01] INFO: [Snapshot 100] Preloading particle fields...
+[11:02:02] WARNING: [Snapshot 90] BH id 118785678 not found in sinks. Skipping galaxy 12.
+[11:02:02] INFO: [Snapshot 90] Loading snapshot...
+yt : [INFO     ] 2026-03-23 11:02:02,496 Calculating time from 5.042e-02 to be 6.156e+15 seconds
+yt : [INFO     ] 2026-03-23 11:02:02,522 Parameters: current_time              = 6155535376193548.0 s
+yt : [INFO     ] 2026-03-23 11:02:02,522 Parameters: domain_dimensions         = [1 1 1]
+yt : [INFO     ] 2026-03-23 11:02:02,522 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2026-03-23 11:02:02,522 Parameters: domain_right_edge         = [40000. 40000. 40000.]
+yt : [INFO     ] 2026-03-23 11:02:02,522 Parameters: cosmological_simulation   = True
+yt : [INFO     ] 2026-03-23 11:02:02,522 Parameters: current_redshift          = 18.835308721398327
+yt : [INFO     ] 2026-03-23 11:02:02,522 Parameters: omega_lambda              = 0.685
+yt : [INFO     ] 2026-03-23 11:02:02,522 Parameters: omega_matter              = 0.315
+yt : [INFO     ] 2026-03-23 11:02:02,522 Parameters: omega_radiation           = 0.0
+yt : [INFO     ] 2026-03-23 11:02:02,522 Parameters: hubble_constant           = 0.674
+yt : [INFO     ] 2026-03-23 11:02:02,703 Allocating for 5.809e+07 particles
+Loading particle index:   0%|          | 0/128 [00:00<?, ?it/s]Loading particle index:  50%|█████     | 64/128 [00:00<00:00, 637.61it/s][11:02:02] INFO: [Snapshot 96] Unique galaxies: 1
+Loading particle index: 100%|██████████| 128/128 [00:00<00:00, 610.65it/s]Loading particle index: 100%|██████████| 128/128 [00:00<00:00, 610.05it/s]
+[11:02:03] INFO: [Snapshot 90] Preloading particle fields...
+[11:02:03] INFO: [Snapshot 92] Unique galaxies: 1
+[11:02:06] INFO: [Snapshot 100] Unique galaxies: 1
+[11:02:06] INFO: [Snapshot 89] Loading snapshot...
+yt : [INFO     ] 2026-03-23 11:02:06,394 Calculating time from 4.993e-02 to be 6.068e+15 seconds
+yt : [INFO     ] 2026-03-23 11:02:06,425 Parameters: current_time              = 6067662015150347.0 s
+yt : [INFO     ] 2026-03-23 11:02:06,425 Parameters: domain_dimensions         = [1 1 1]
+yt : [INFO     ] 2026-03-23 11:02:06,425 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2026-03-23 11:02:06,425 Parameters: domain_right_edge         = [40000. 40000. 40000.]
+yt : [INFO     ] 2026-03-23 11:02:06,425 Parameters: cosmological_simulation   = True
+yt : [INFO     ] 2026-03-23 11:02:06,425 Parameters: current_redshift          = 19.026373487165625
+yt : [INFO     ] 2026-03-23 11:02:06,425 Parameters: omega_lambda              = 0.685
+yt : [INFO     ] 2026-03-23 11:02:06,425 Parameters: omega_matter              = 0.315
+yt : [INFO     ] 2026-03-23 11:02:06,425 Parameters: omega_radiation           = 0.0
+yt : [INFO     ] 2026-03-23 11:02:06,425 Parameters: hubble_constant           = 0.674
+yt : [INFO     ] 2026-03-23 11:02:06,606 Allocating for 5.805e+07 particles
+
+------ DEBUG SNAPSHOT 86  GALAXY 5  ------
+z = 19.414042074300877
+BH id: 104677365
+BH Type: MBH
+Sink position (code units): [(20016.134735325923, 20139.56036562441, 19633.44692041647)]
+Center (code units): [19991.67224551 20096.42299728 19711.5959892 ]
+Center (kpc): [1452.98215345 1460.59537214 1432.62638745]
+BH StellarMass (code): 0.0006641801421413625
+BH Mass (Msun): 9854304.779545438
+Metallicity mass-weighted: 0.21388234880107668
+Metallicity min: 7.338805156878715e-07
+Metallicity max: 20.839334480106167
+Gas mass: 50476964.78500213
+Loading particle index:   0%|          | 0/128 [00:00<?, ?it/s]Loading particle index:  47%|████▋     | 60/128 [00:00<00:00, 599.48it/s]Loading particle index:  94%|█████████▍| 120/128 [00:00<00:00, 576.12it/s]Loading particle index: 100%|██████████| 128/128 [00:00<00:00, 576.34it/s]
+[11:02:07] INFO: [Snapshot 89] Preloading particle fields...
+[11:02:07] WARNING: [Snapshot 94] BH id 128255029 not found in sinks. Skipping galaxy 27.
+[11:02:07] INFO: [Snapshot 95] Loading snapshot...
+yt : [INFO     ] 2026-03-23 11:02:07,635 Calculating time from 5.214e-02 to be 6.473e+15 seconds
+yt : [INFO     ] 2026-03-23 11:02:07,666 Parameters: current_time              = 6473233491225817.0 s
+yt : [INFO     ] 2026-03-23 11:02:07,666 Parameters: domain_dimensions         = [1 1 1]
+yt : [INFO     ] 2026-03-23 11:02:07,666 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2026-03-23 11:02:07,666 Parameters: domain_right_edge         = [40000. 40000. 40000.]
+yt : [INFO     ] 2026-03-23 11:02:07,667 Parameters: cosmological_simulation   = True
+yt : [INFO     ] 2026-03-23 11:02:07,667 Parameters: current_redshift          = 18.180823524536994
+yt : [INFO     ] 2026-03-23 11:02:07,667 Parameters: omega_lambda              = 0.685
+yt : [INFO     ] 2026-03-23 11:02:07,667 Parameters: omega_matter              = 0.315
+yt : [INFO     ] 2026-03-23 11:02:07,667 Parameters: omega_radiation           = 0.0
+yt : [INFO     ] 2026-03-23 11:02:07,667 Parameters: hubble_constant           = 0.674
+yt : [INFO     ] 2026-03-23 11:02:07,848 Allocating for 5.829e+07 particles
+Loading particle index:   0%|          | 0/128 [00:00<?, ?it/s][11:02:07] INFO: [Snapshot 90] Unique galaxies: 1
+Loading particle index:  52%|█████▏    | 66/128 [00:00<00:00, 650.13it/s]Loading particle index: 100%|██████████| 128/128 [00:00<00:00, 604.86it/s]
+[11:02:08] INFO: [Snapshot 95] Preloading particle fields...
+[11:02:11] WARNING: [Snapshot 96] BH id 97315620 not found in sinks. Skipping galaxy 34.
+[11:02:11] INFO: [Snapshot 97] Loading snapshot...
+yt : [INFO     ] 2026-03-23 11:02:11,478 Calculating time from 5.289e-02 to be 6.614e+15 seconds
+yt : [INFO     ] 2026-03-23 11:02:11,508 Parameters: current_time              = 6614359900155859.0 s
+yt : [INFO     ] 2026-03-23 11:02:11,509 Parameters: domain_dimensions         = [1 1 1]
+yt : [INFO     ] 2026-03-23 11:02:11,509 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2026-03-23 11:02:11,509 Parameters: domain_right_edge         = [40000. 40000. 40000.]
+yt : [INFO     ] 2026-03-23 11:02:11,509 Parameters: cosmological_simulation   = True
+yt : [INFO     ] 2026-03-23 11:02:11,509 Parameters: current_redshift          = 17.906982793544053
+yt : [INFO     ] 2026-03-23 11:02:11,509 Parameters: omega_lambda              = 0.685
+yt : [INFO     ] 2026-03-23 11:02:11,509 Parameters: omega_matter              = 0.315
+yt : [INFO     ] 2026-03-23 11:02:11,509 Parameters: omega_radiation           = 0.0
+yt : [INFO     ] 2026-03-23 11:02:11,509 Parameters: hubble_constant           = 0.674
+[11:02:11] INFO: [Snapshot 89] Unique galaxies: 1
+[11:02:12] WARNING: [Snapshot 92] BH id 125864160 not found in sinks. Skipping galaxy 20.
+[11:02:12] INFO: [Snapshot 92] Loading snapshot...
+yt : [INFO     ] 2026-03-23 11:02:12,137 Calculating time from 5.115e-02 to be 6.290e+15 seconds
+yt : [INFO     ] 2026-03-23 11:02:12,167 Parameters: current_time              = 6289736843011771.0 s
+yt : [INFO     ] 2026-03-23 11:02:12,167 Parameters: domain_dimensions         = [1 1 1]
+yt : [INFO     ] 2026-03-23 11:02:12,167 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2026-03-23 11:02:12,167 Parameters: domain_right_edge         = [40000. 40000. 40000.]
+yt : [INFO     ] 2026-03-23 11:02:12,167 Parameters: cosmological_simulation   = True
+yt : [INFO     ] 2026-03-23 11:02:12,167 Parameters: current_redshift          = 18.552124037863244
+yt : [INFO     ] 2026-03-23 11:02:12,167 Parameters: omega_lambda              = 0.685
+yt : [INFO     ] 2026-03-23 11:02:12,167 Parameters: omega_matter              = 0.315
+yt : [INFO     ] 2026-03-23 11:02:12,167 Parameters: omega_radiation           = 0.0
+yt : [INFO     ] 2026-03-23 11:02:12,167 Parameters: hubble_constant           = 0.674
+yt : [INFO     ] 2026-03-23 11:02:12,347 Allocating for 5.818e+07 particles
+Loading particle index:   0%|          | 0/128 [00:00<?, ?it/s]Loading particle index:  48%|████▊     | 62/128 [00:00<00:00, 619.23it/s]Loading particle index:  97%|█████████▋| 124/128 [00:00<00:00, 583.02it/s]Loading particle index: 100%|██████████| 128/128 [00:00<00:00, 581.25it/s]
+[11:02:13] INFO: [Snapshot 92] Preloading particle fields...
+[11:02:13] INFO: [Snapshot 95] Unique galaxies: 1
+yt : [INFO     ] 2026-03-23 11:02:14,391 Allocating for 5.836e+07 particles
+Loading particle index:   0%|          | 0/128 [00:00<?, ?it/s]Loading particle index:  52%|█████▏    | 67/128 [00:00<00:00, 660.62it/s]Loading particle index: 100%|██████████| 128/128 [00:00<00:00, 641.07it/s]
+[11:02:14] WARNING: [Snapshot 100] BH id 133691430 not found in sinks. Skipping galaxy 49.
+[11:02:14] INFO: [Snapshot 100] Loading snapshot...
+yt : [INFO     ] 2026-03-23 11:02:14,895 Calculating time from 5.391e-02 to be 6.807e+15 seconds
+yt : [INFO     ] 2026-03-23 11:02:14,920 Parameters: current_time              = 6807325025165973.0 s
+yt : [INFO     ] 2026-03-23 11:02:14,920 Parameters: domain_dimensions         = [1 1 1]
+yt : [INFO     ] 2026-03-23 11:02:14,920 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2026-03-23 11:02:14,921 Parameters: domain_right_edge         = [40000. 40000. 40000.]
+yt : [INFO     ] 2026-03-23 11:02:14,921 Parameters: cosmological_simulation   = True
+yt : [INFO     ] 2026-03-23 11:02:14,921 Parameters: current_redshift          = 17.54793369979349
+yt : [INFO     ] 2026-03-23 11:02:14,921 Parameters: omega_lambda              = 0.685
+yt : [INFO     ] 2026-03-23 11:02:14,921 Parameters: omega_matter              = 0.315
+yt : [INFO     ] 2026-03-23 11:02:14,921 Parameters: omega_radiation           = 0.0
+yt : [INFO     ] 2026-03-23 11:02:14,921 Parameters: hubble_constant           = 0.674
+[11:02:15] INFO: [Snapshot 97] Preloading particle fields...
+yt : [INFO     ] 2026-03-23 11:02:15,104 Allocating for 5.845e+07 particles
+Loading particle index:   0%|          | 0/128 [00:00<?, ?it/s]Loading particle index:  52%|█████▏    | 66/128 [00:00<00:00, 654.86it/s]Loading particle index: 100%|██████████| 128/128 [00:00<00:00, 629.17it/s]
+[11:02:15] INFO: [Snapshot 100] Preloading particle fields...
+[11:02:17] INFO: [Snapshot 92] Unique galaxies: 1
+[11:02:20] INFO: [Snapshot 100] Unique galaxies: 1
+[11:02:20] WARNING: [Snapshot 89] BH id 113958409 not found in sinks. Skipping galaxy 6.
+[11:02:20] INFO: [Snapshot 89] Loading snapshot...
+yt : [INFO     ] 2026-03-23 11:02:20,330 Calculating time from 4.993e-02 to be 6.068e+15 seconds
+yt : [INFO     ] 2026-03-23 11:02:20,360 Parameters: current_time              = 6067662015150347.0 s
+yt : [INFO     ] 2026-03-23 11:02:20,360 Parameters: domain_dimensions         = [1 1 1]
+yt : [INFO     ] 2026-03-23 11:02:20,360 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2026-03-23 11:02:20,360 Parameters: domain_right_edge         = [40000. 40000. 40000.]
+yt : [INFO     ] 2026-03-23 11:02:20,360 Parameters: cosmological_simulation   = True
+yt : [INFO     ] 2026-03-23 11:02:20,360 Parameters: current_redshift          = 19.026373487165625
+yt : [INFO     ] 2026-03-23 11:02:20,360 Parameters: omega_lambda              = 0.685
+yt : [INFO     ] 2026-03-23 11:02:20,360 Parameters: omega_matter              = 0.315
+yt : [INFO     ] 2026-03-23 11:02:20,360 Parameters: omega_radiation           = 0.0
+yt : [INFO     ] 2026-03-23 11:02:20,360 Parameters: hubble_constant           = 0.674
+yt : [INFO     ] 2026-03-23 11:02:20,541 Allocating for 5.805e+07 particles
+Loading particle index:   0%|          | 0/128 [00:00<?, ?it/s]Loading particle index:  52%|█████▏    | 66/128 [00:00<00:00, 655.71it/s]Loading particle index: 100%|██████████| 128/128 [00:00<00:00, 625.62it/s]
+[11:02:21] INFO: [Snapshot 89] Preloading particle fields...
+[11:02:21] WARNING: [Snapshot 95] BH id 113958409 not found in sinks. Skipping galaxy 28.
+[11:02:21] INFO: [Snapshot 95] Loading snapshot...
+yt : [INFO     ] 2026-03-23 11:02:21,692 Calculating time from 5.214e-02 to be 6.473e+15 seconds
+yt : [INFO     ] 2026-03-23 11:02:21,722 Parameters: current_time              = 6473233491225817.0 s
+yt : [INFO     ] 2026-03-23 11:02:21,723 Parameters: domain_dimensions         = [1 1 1]
+yt : [INFO     ] 2026-03-23 11:02:21,723 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2026-03-23 11:02:21,723 Parameters: domain_right_edge         = [40000. 40000. 40000.]
+yt : [INFO     ] 2026-03-23 11:02:21,723 Parameters: cosmological_simulation   = True
+yt : [INFO     ] 2026-03-23 11:02:21,723 Parameters: current_redshift          = 18.180823524536994
+yt : [INFO     ] 2026-03-23 11:02:21,723 Parameters: omega_lambda              = 0.685
+yt : [INFO     ] 2026-03-23 11:02:21,723 Parameters: omega_matter              = 0.315
+yt : [INFO     ] 2026-03-23 11:02:21,723 Parameters: omega_radiation           = 0.0
+yt : [INFO     ] 2026-03-23 11:02:21,723 Parameters: hubble_constant           = 0.674
+yt : [INFO     ] 2026-03-23 11:02:21,905 Allocating for 5.829e+07 particles
+Loading particle index:   0%|          | 0/128 [00:00<?, ?it/s]Loading particle index:  53%|█████▎    | 68/128 [00:00<00:00, 673.71it/s]Loading particle index: 100%|██████████| 128/128 [00:00<00:00, 632.37it/s]
+[11:02:22] INFO: [Snapshot 91] Loading snapshot...
+yt : [INFO     ] 2026-03-23 11:02:22,531 Calculating time from 5.066e-02 to be 6.200e+15 seconds
+[11:02:22] INFO: [Snapshot 95] Preloading particle fields...
+yt : [INFO     ] 2026-03-23 11:02:22,778 Parameters: current_time              = 6199948048444915.0 s
+yt : [INFO     ] 2026-03-23 11:02:22,778 Parameters: domain_dimensions         = [1 1 1]
+yt : [INFO     ] 2026-03-23 11:02:22,779 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2026-03-23 11:02:22,780 Parameters: domain_right_edge         = [40000. 40000. 40000.]
+yt : [INFO     ] 2026-03-23 11:02:22,780 Parameters: cosmological_simulation   = True
+yt : [INFO     ] 2026-03-23 11:02:22,781 Parameters: current_redshift          = 18.740461010683706
+yt : [INFO     ] 2026-03-23 11:02:22,781 Parameters: omega_lambda              = 0.685
+yt : [INFO     ] 2026-03-23 11:02:22,781 Parameters: omega_matter              = 0.315
+yt : [INFO     ] 2026-03-23 11:02:22,781 Parameters: omega_radiation           = 0.0
+yt : [INFO     ] 2026-03-23 11:02:22,781 Parameters: hubble_constant           = 0.674
+yt : [INFO     ] 2026-03-23 11:02:24,260 Allocating for 5.812e+07 particles
+
+------ DEBUG SNAPSHOT 90  GALAXY 13  ------
+z = 18.835308721398327
+BH id: 119306686
+BH Type: MBH
+Sink position (code units): [(20015.60880040327, 20139.72405247638, 19633.342937705358)]
+Center (code units): [19993.78057897 20098.24568566 19702.32293523]
+Center (kpc): [1495.53341074 1503.34739353 1473.73239906]
+BH StellarMass (code): 0.0013599267281481921
+BH Mass (Msun): 20176954.42356368
+Metallicity mass-weighted: 0.21060378142408312
+Metallicity min: 1.881185717626313e-06
+Metallicity max: 33.61411015017182
+Gas mass: 51410201.20688485
+Loading particle index:   0%|          | 0/128 [00:00<?, ?it/s]Loading particle index:  11%|█         | 14/128 [00:00<00:00, 122.26it/s]Loading particle index:  21%|██        | 27/128 [00:00<00:01, 89.88it/s] Loading particle index:  29%|██▉       | 37/128 [00:00<00:01, 78.25it/s]Loading particle index:  36%|███▌      | 46/128 [00:00<00:01, 79.21it/s]Loading particle index:  43%|████▎     | 55/128 [00:00<00:00, 77.73it/s]Loading particle index:  49%|████▉     | 63/128 [00:00<00:00, 77.74it/s]Loading particle index:  56%|█████▋    | 72/128 [00:00<00:00, 80.22it/s]Loading particle index:  63%|██████▎   | 81/128 [00:01<00:00, 75.05it/s]Loading particle index:  70%|███████   | 90/128 [00:01<00:00, 77.05it/s]Loading particle index:  77%|███████▋  | 99/128 [00:01<00:00, 78.84it/s]Loading particle index:  84%|████████▎ | 107/128 [00:01<00:00, 75.98it/s][11:02:25] INFO: [Snapshot 89] Unique galaxies: 1
+Loading particle index:  90%|████████▉ | 115/128 [00:01<00:00, 76.75it/s]Loading particle index:  97%|█████████▋| 124/128 [00:01<00:00, 78.32it/s]Loading particle index: 100%|██████████| 128/128 [00:01<00:00, 79.03it/s]
+[11:02:26] INFO: [Snapshot 92] Loading snapshot...
+[11:02:26] INFO: [Snapshot 101] Loading snapshot...
+yt : [INFO     ] 2026-03-23 11:02:26,275 Calculating time from 5.115e-02 to be 6.290e+15 seconds
+yt : [INFO     ] 2026-03-23 11:02:26,301 Parameters: current_time              = 6289736843011771.0 s
+yt : [INFO     ] 2026-03-23 11:02:26,301 Parameters: domain_dimensions         = [1 1 1]
+yt : [INFO     ] 2026-03-23 11:02:26,301 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2026-03-23 11:02:26,301 Parameters: domain_right_edge         = [40000. 40000. 40000.]
+yt : [INFO     ] 2026-03-23 11:02:26,301 Parameters: cosmological_simulation   = True
+yt : [INFO     ] 2026-03-23 11:02:26,301 Parameters: current_redshift          = 18.552124037863244
+yt : [INFO     ] 2026-03-23 11:02:26,301 Parameters: omega_lambda              = 0.685
+yt : [INFO     ] 2026-03-23 11:02:26,301 Parameters: omega_matter              = 0.315
+yt : [INFO     ] 2026-03-23 11:02:26,301 Parameters: omega_radiation           = 0.0
+yt : [INFO     ] 2026-03-23 11:02:26,301 Parameters: hubble_constant           = 0.674
+[11:02:26] INFO: [Snapshot 97] Unique galaxies: 1
+yt : [INFO     ] 2026-03-23 11:02:26,482 Allocating for 5.818e+07 particles
+
+------ DEBUG SNAPSHOT 92  GALAXY 21  ------
+z = 18.552124037863244
+BH id: 102693011
+BH Type: MBH
+Sink position (code units): [(20016.029002518593, 20139.777910373785, 19633.600442276856)]
+Center (code units): [19994.4401129  20098.33564391 19697.71387253]
+Center (kpc): [1517.24413086 1525.12806679 1494.72756405]
+BH StellarMass (code): 0.0010787875319753957
+BH Mass (Msun): 16005749.732572636
+Metallicity mass-weighted: 0.23287541683985138
+Metallicity min: 8.378151827064865e-07
+Metallicity max: 34.39199572488478
+Gas mass: 48058268.63696927
+Loading particle index:   0%|          | 0/128 [00:00<?, ?it/s]Loading particle index:  51%|█████     | 65/128 [00:00<00:00, 644.73it/s]Loading particle index: 100%|██████████| 128/128 [00:00<00:00, 617.45it/s]
+[11:02:26] INFO: [Snapshot 95] Unique galaxies: 1
+[11:02:27] INFO: [Snapshot 92] Preloading particle fields...
+yt : [INFO     ] 2026-03-23 11:02:28,829 Calculating time from 5.443e-02 to be 6.906e+15 seconds
+yt : [INFO     ] 2026-03-23 11:02:28,872 Parameters: current_time              = 6905908014305612.0 s
+yt : [INFO     ] 2026-03-23 11:02:28,872 Parameters: domain_dimensions         = [1 1 1]
+yt : [INFO     ] 2026-03-23 11:02:28,872 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2026-03-23 11:02:28,872 Parameters: domain_right_edge         = [40000. 40000. 40000.]
+yt : [INFO     ] 2026-03-23 11:02:28,873 Parameters: cosmological_simulation   = True
+yt : [INFO     ] 2026-03-23 11:02:28,873 Parameters: current_redshift          = 17.37097422132927
+yt : [INFO     ] 2026-03-23 11:02:28,873 Parameters: omega_lambda              = 0.685
+yt : [INFO     ] 2026-03-23 11:02:28,873 Parameters: omega_matter              = 0.315
+yt : [INFO     ] 2026-03-23 11:02:28,873 Parameters: omega_radiation           = 0.0
+yt : [INFO     ] 2026-03-23 11:02:28,873 Parameters: hubble_constant           = 0.674
+[11:02:28] WARNING: [Snapshot 100] BH id 123812523 not found in sinks. Skipping galaxy 50.
+[11:02:28] INFO: [Snapshot 100] Loading snapshot...
+yt : [INFO     ] 2026-03-23 11:02:28,934 Calculating time from 5.391e-02 to be 6.807e+15 seconds
+yt : [INFO     ] 2026-03-23 11:02:28,957 Parameters: current_time              = 6807325025165973.0 s
+yt : [INFO     ] 2026-03-23 11:02:28,957 Parameters: domain_dimensions         = [1 1 1]
+yt : [INFO     ] 2026-03-23 11:02:28,957 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2026-03-23 11:02:28,957 Parameters: domain_right_edge         = [40000. 40000. 40000.]
+yt : [INFO     ] 2026-03-23 11:02:28,957 Parameters: cosmological_simulation   = True
+yt : [INFO     ] 2026-03-23 11:02:28,957 Parameters: current_redshift          = 17.54793369979349
+yt : [INFO     ] 2026-03-23 11:02:28,957 Parameters: omega_lambda              = 0.685
+yt : [INFO     ] 2026-03-23 11:02:28,957 Parameters: omega_matter              = 0.315
+yt : [INFO     ] 2026-03-23 11:02:28,957 Parameters: omega_radiation           = 0.0
+yt : [INFO     ] 2026-03-23 11:02:28,957 Parameters: hubble_constant           = 0.674
+yt : [INFO     ] 2026-03-23 11:02:29,060 Allocating for 5.85e+07 particles
+Loading particle index:   0%|          | 0/128 [00:00<?, ?it/s]yt : [INFO     ] 2026-03-23 11:02:29,139 Allocating for 5.845e+07 particles
+Loading particle index:   0%|          | 0/128 [00:00<?, ?it/s]Loading particle index:  51%|█████     | 65/128 [00:00<00:00, 642.57it/s]Loading particle index:  52%|█████▏    | 67/128 [00:00<00:00, 665.68it/s]Loading particle index: 100%|██████████| 128/128 [00:00<00:00, 613.08it/s]
+Loading particle index: 100%|██████████| 128/128 [00:00<00:00, 636.32it/s]
+[11:02:29] INFO: [Snapshot 91] Preloading particle fields...
+[11:02:29] INFO: [Snapshot 100] Preloading particle fields...
+[11:02:31] INFO: [Snapshot 92] Unique galaxies: 1
+[11:02:33] INFO: [Snapshot 98] Unique galaxies: 1
+[11:02:34] INFO: [Snapshot 100] Unique galaxies: 1
+[11:02:35] INFO: [Snapshot 95] Loading snapshot...
+yt : [INFO     ] 2026-03-23 11:02:35,448 Calculating time from 5.214e-02 to be 6.473e+15 seconds
+yt : [INFO     ] 2026-03-23 11:02:35,474 Parameters: current_time              = 6473233491225817.0 s
+yt : [INFO     ] 2026-03-23 11:02:35,474 Parameters: domain_dimensions         = [1 1 1]
+yt : [INFO     ] 2026-03-23 11:02:35,474 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2026-03-23 11:02:35,474 Parameters: domain_right_edge         = [40000. 40000. 40000.]
+yt : [INFO     ] 2026-03-23 11:02:35,474 Parameters: cosmological_simulation   = True
+yt : [INFO     ] 2026-03-23 11:02:35,474 Parameters: current_redshift          = 18.180823524536994
+yt : [INFO     ] 2026-03-23 11:02:35,474 Parameters: omega_lambda              = 0.685
+yt : [INFO     ] 2026-03-23 11:02:35,474 Parameters: omega_matter              = 0.315
+yt : [INFO     ] 2026-03-23 11:02:35,474 Parameters: omega_radiation           = 0.0
+yt : [INFO     ] 2026-03-23 11:02:35,474 Parameters: hubble_constant           = 0.674
+yt : [INFO     ] 2026-03-23 11:02:35,654 Allocating for 5.829e+07 particles
+
+------ DEBUG SNAPSHOT 95  GALAXY 29  ------
+z = 18.180823524536994
+BH id: 102573735
+BH Type: MBH
+Sink position (code units): [(20015.910177339487, 20139.559496560596, 19633.40342770317)]
+Center (code units): [19996.48271808 20102.78441273 19692.07353901]
+Center (kpc): [1546.77279504 1554.99546958 1523.22606218]
+BH StellarMass (code): 0.002501391124038771
+BH Mass (Msun): 37112627.95309749
+Metallicity mass-weighted: 0.26060436416060245
+Metallicity min: 4.003635519771588e-07
+Metallicity max: 29.61010817642582
+Gas mass: 51328925.194390275
+Loading particle index:   0%|          | 0/128 [00:00<?, ?it/s]Loading particle index:  52%|█████▏    | 67/128 [00:00<00:00, 668.68it/s]Loading particle index: 100%|██████████| 128/128 [00:00<00:00, 625.67it/s]
+[11:02:36] INFO: [Snapshot 97] Loading snapshot...
+yt : [INFO     ] 2026-03-23 11:02:36,246 Calculating time from 5.289e-02 to be 6.614e+15 seconds
+yt : [INFO     ] 2026-03-23 11:02:36,277 Parameters: current_time              = 6614359900155859.0 s
+yt : [INFO     ] 2026-03-23 11:02:36,277 Parameters: domain_dimensions         = [1 1 1]
+yt : [INFO     ] 2026-03-23 11:02:36,277 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2026-03-23 11:02:36,277 Parameters: domain_right_edge         = [40000. 40000. 40000.]
+yt : [INFO     ] 2026-03-23 11:02:36,277 Parameters: cosmological_simulation   = True
+yt : [INFO     ] 2026-03-23 11:02:36,277 Parameters: current_redshift          = 17.906982793544053
+yt : [INFO     ] 2026-03-23 11:02:36,277 Parameters: omega_lambda              = 0.685
+yt : [INFO     ] 2026-03-23 11:02:36,277 Parameters: omega_matter              = 0.315
+yt : [INFO     ] 2026-03-23 11:02:36,277 Parameters: omega_radiation           = 0.0
+yt : [INFO     ] 2026-03-23 11:02:36,277 Parameters: hubble_constant           = 0.674
+[11:02:36] INFO: [Snapshot 95] Preloading particle fields...
+[11:02:36] INFO: [Snapshot 101] Preloading particle fields...
+yt : [INFO     ] 2026-03-23 11:02:36,458 Allocating for 5.836e+07 particles
+
+------ DEBUG SNAPSHOT 97  GALAXY 35  ------
+z = 17.906982793544053
+BH id: 102573735
+BH Type: MBH
+Sink position (code units): [(20015.910177339487, 20139.559496560596, 19633.40342770317)]
+Center (code units): [19998.41782556 20105.73496276 19687.56025741]
+Center (kpc): [1569.32744997 1577.74890264 1544.93365447]
+BH StellarMass (code): 0.002501391124038771
+BH Mass (Msun): 37112627.95309749
+Metallicity mass-weighted: 0.27408653810939937
+Metallicity min: 1.011950016187626e-06
+Metallicity max: 25.617186210357318
+Gas mass: 50135223.35986212
+Loading particle index:   0%|          | 0/128 [00:00<?, ?it/s]Loading particle index:  55%|█████▍    | 70/128 [00:00<00:00, 689.17it/s]Loading particle index: 100%|██████████| 128/128 [00:00<00:00, 641.80it/s]
+[11:02:37] INFO: [Snapshot 97] Preloading particle fields...
+[11:02:40] WARNING: [Snapshot 92] BH id 117559556 not found in sinks. Skipping galaxy 22.
+[11:02:40] INFO: [Snapshot 92] Loading snapshot...
+yt : [INFO     ] 2026-03-23 11:02:40,150 Calculating time from 5.115e-02 to be 6.290e+15 seconds
+yt : [INFO     ] 2026-03-23 11:02:40,173 Parameters: current_time              = 6289736843011771.0 s
+yt : [INFO     ] 2026-03-23 11:02:40,173 Parameters: domain_dimensions         = [1 1 1]
+yt : [INFO     ] 2026-03-23 11:02:40,173 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2026-03-23 11:02:40,173 Parameters: domain_right_edge         = [40000. 40000. 40000.]
+yt : [INFO     ] 2026-03-23 11:02:40,173 Parameters: cosmological_simulation   = True
+yt : [INFO     ] 2026-03-23 11:02:40,173 Parameters: current_redshift          = 18.552124037863244
+yt : [INFO     ] 2026-03-23 11:02:40,173 Parameters: omega_lambda              = 0.685
+yt : [INFO     ] 2026-03-23 11:02:40,173 Parameters: omega_matter              = 0.315
+yt : [INFO     ] 2026-03-23 11:02:40,173 Parameters: omega_radiation           = 0.0
+yt : [INFO     ] 2026-03-23 11:02:40,173 Parameters: hubble_constant           = 0.674
+yt : [INFO     ] 2026-03-23 11:02:40,353 Allocating for 5.818e+07 particles
+Loading particle index:   0%|          | 0/128 [00:00<?, ?it/s]Loading particle index:  49%|████▉     | 63/128 [00:00<00:00, 626.08it/s]Loading particle index:  98%|█████████▊| 126/128 [00:00<00:00, 608.01it/s]Loading particle index: 100%|██████████| 128/128 [00:00<00:00, 605.36it/s]
+[11:02:40] INFO: [Snapshot 95] Unique galaxies: 1
+[11:02:40] INFO: [Snapshot 101] Unique galaxies: 1
+[11:02:41] INFO: [Snapshot 92] Preloading particle fields...
+[11:02:41] INFO: [Snapshot 97] Unique galaxies: 1
+[11:02:42] WARNING: [Snapshot 100] BH id 153246400 not found in sinks. Skipping galaxy 51.
+[11:02:42] INFO: [Snapshot 100] Loading snapshot...
+yt : [INFO     ] 2026-03-23 11:02:42,971 Calculating time from 5.391e-02 to be 6.807e+15 seconds
+yt : [INFO     ] 2026-03-23 11:02:42,993 Parameters: current_time              = 6807325025165973.0 s
+yt : [INFO     ] 2026-03-23 11:02:42,993 Parameters: domain_dimensions         = [1 1 1]
+yt : [INFO     ] 2026-03-23 11:02:42,993 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2026-03-23 11:02:42,993 Parameters: domain_right_edge         = [40000. 40000. 40000.]
+yt : [INFO     ] 2026-03-23 11:02:42,993 Parameters: cosmological_simulation   = True
+yt : [INFO     ] 2026-03-23 11:02:42,993 Parameters: current_redshift          = 17.54793369979349
+yt : [INFO     ] 2026-03-23 11:02:42,993 Parameters: omega_lambda              = 0.685
+yt : [INFO     ] 2026-03-23 11:02:42,993 Parameters: omega_matter              = 0.315
+yt : [INFO     ] 2026-03-23 11:02:42,993 Parameters: omega_radiation           = 0.0
+yt : [INFO     ] 2026-03-23 11:02:42,993 Parameters: hubble_constant           = 0.674
+yt : [INFO     ] 2026-03-23 11:02:43,175 Allocating for 5.845e+07 particles
+Loading particle index:   0%|          | 0/128 [00:00<?, ?it/s]Loading particle index:  52%|█████▏    | 66/128 [00:00<00:00, 657.35it/s]Loading particle index: 100%|██████████| 128/128 [00:00<00:00, 613.72it/s]
+[11:02:43] INFO: [Snapshot 100] Preloading particle fields...
+[11:02:45] INFO: [Snapshot 92] Unique galaxies: 1
+[11:02:48] INFO: [Snapshot 100] Unique galaxies: 1
+[11:02:49] INFO: [Snapshot 95] Loading snapshot...
+yt : [INFO     ] 2026-03-23 11:02:49,269 Calculating time from 5.214e-02 to be 6.473e+15 seconds
+yt : [INFO     ] 2026-03-23 11:02:49,292 Parameters: current_time              = 6473233491225817.0 s
+yt : [INFO     ] 2026-03-23 11:02:49,292 Parameters: domain_dimensions         = [1 1 1]
+yt : [INFO     ] 2026-03-23 11:02:49,292 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2026-03-23 11:02:49,292 Parameters: domain_right_edge         = [40000. 40000. 40000.]
+yt : [INFO     ] 2026-03-23 11:02:49,292 Parameters: cosmological_simulation   = True
+yt : [INFO     ] 2026-03-23 11:02:49,292 Parameters: current_redshift          = 18.180823524536994
+yt : [INFO     ] 2026-03-23 11:02:49,292 Parameters: omega_lambda              = 0.685
+yt : [INFO     ] 2026-03-23 11:02:49,292 Parameters: omega_matter              = 0.315
+yt : [INFO     ] 2026-03-23 11:02:49,292 Parameters: omega_radiation           = 0.0
+yt : [INFO     ] 2026-03-23 11:02:49,292 Parameters: hubble_constant           = 0.674
+yt : [INFO     ] 2026-03-23 11:02:49,476 Allocating for 5.829e+07 particles
+
+------ DEBUG SNAPSHOT 95  GALAXY 30  ------
+z = 18.180823524536994
+BH id: 102573735
+BH Type: MBH
+Sink position (code units): [(20015.910177339487, 20139.559496560596, 19633.40342770317)]
+Center (code units): [19996.48271808 20102.78441273 19692.07353901]
+Center (kpc): [1546.77279504 1554.99546958 1523.22606218]
+BH StellarMass (code): 0.002501391124038771
+BH Mass (Msun): 37112627.95309749
+Metallicity mass-weighted: 0.26060436416060245
+Metallicity min: 4.003635519771588e-07
+Metallicity max: 29.61010817642582
+Gas mass: 51328925.194390275
+Loading particle index:   0%|          | 0/128 [00:00<?, ?it/s]Loading particle index:  52%|█████▏    | 67/128 [00:00<00:00, 665.89it/s][11:02:49] WARNING: [Snapshot 101] BH id 97315620 not found in sinks. Skipping galaxy 56.
+[11:02:49] INFO: [Snapshot 102] Loading snapshot...
+yt : [INFO     ] 2026-03-23 11:02:49,634 Calculating time from 5.470e-02 to be 6.956e+15 seconds
+yt : [INFO     ] 2026-03-23 11:02:49,665 Parameters: current_time              = 6955733473951961.0 s
+yt : [INFO     ] 2026-03-23 11:02:49,665 Parameters: domain_dimensions         = [1 1 1]
+yt : [INFO     ] 2026-03-23 11:02:49,665 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2026-03-23 11:02:49,665 Parameters: domain_right_edge         = [40000. 40000. 40000.]
+yt : [INFO     ] 2026-03-23 11:02:49,665 Parameters: cosmological_simulation   = True
+yt : [INFO     ] 2026-03-23 11:02:49,665 Parameters: current_redshift          = 17.28312860859068
+yt : [INFO     ] 2026-03-23 11:02:49,665 Parameters: omega_lambda              = 0.685
+yt : [INFO     ] 2026-03-23 11:02:49,665 Parameters: omega_matter              = 0.315
+yt : [INFO     ] 2026-03-23 11:02:49,665 Parameters: omega_radiation           = 0.0
+yt : [INFO     ] 2026-03-23 11:02:49,665 Parameters: hubble_constant           = 0.674
+Loading particle index: 100%|██████████| 128/128 [00:00<00:00, 612.51it/s]
+yt : [INFO     ] 2026-03-23 11:02:49,848 Allocating for 5.853e+07 particles
+Loading particle index:   0%|          | 0/128 [00:00<?, ?it/s]Loading particle index:  58%|█████▊    | 74/128 [00:00<00:00, 736.88it/s]Loading particle index: 100%|██████████| 128/128 [00:00<00:00, 652.68it/s]
+[11:02:50] INFO: [Snapshot 95] Preloading particle fields...
+[11:02:50] WARNING: [Snapshot 97] BH id 124342885 not found in sinks. Skipping galaxy 36.
+[11:02:50] INFO: [Snapshot 97] Loading snapshot...
+yt : [INFO     ] 2026-03-23 11:02:50,202 Calculating time from 5.289e-02 to be 6.614e+15 seconds
+yt : [INFO     ] 2026-03-23 11:02:50,227 Parameters: current_time              = 6614359900155859.0 s
+yt : [INFO     ] 2026-03-23 11:02:50,227 Parameters: domain_dimensions         = [1 1 1]
+yt : [INFO     ] 2026-03-23 11:02:50,227 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2026-03-23 11:02:50,227 Parameters: domain_right_edge         = [40000. 40000. 40000.]
+yt : [INFO     ] 2026-03-23 11:02:50,227 Parameters: cosmological_simulation   = True
+yt : [INFO     ] 2026-03-23 11:02:50,227 Parameters: current_redshift          = 17.906982793544053
+yt : [INFO     ] 2026-03-23 11:02:50,227 Parameters: omega_lambda              = 0.685
+yt : [INFO     ] 2026-03-23 11:02:50,227 Parameters: omega_matter              = 0.315
+yt : [INFO     ] 2026-03-23 11:02:50,227 Parameters: omega_radiation           = 0.0
+yt : [INFO     ] 2026-03-23 11:02:50,228 Parameters: hubble_constant           = 0.674
+yt : [INFO     ] 2026-03-23 11:02:50,409 Allocating for 5.836e+07 particles
+Loading particle index:   0%|          | 0/128 [00:00<?, ?it/s]Loading particle index:  53%|█████▎    | 68/128 [00:00<00:00, 679.48it/s][11:02:50] INFO: [Snapshot 102] Preloading particle fields...
+Loading particle index: 100%|██████████| 128/128 [00:00<00:00, 629.94it/s]
+[11:02:51] INFO: [Snapshot 97] Preloading particle fields...
+[11:02:54] INFO: [Snapshot 95] Unique galaxies: 1
+[11:02:55] INFO: [Snapshot 102] Unique galaxies: 1
+[11:02:55] INFO: [Snapshot 97] Unique galaxies: 1
+[11:02:57] INFO: [Snapshot 101] Loading snapshot...
+yt : [INFO     ] 2026-03-23 11:02:57,220 Calculating time from 5.443e-02 to be 6.906e+15 seconds
+yt : [INFO     ] 2026-03-23 11:02:57,251 Parameters: current_time              = 6905908014305612.0 s
+yt : [INFO     ] 2026-03-23 11:02:57,251 Parameters: domain_dimensions         = [1 1 1]
+yt : [INFO     ] 2026-03-23 11:02:57,251 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2026-03-23 11:02:57,251 Parameters: domain_right_edge         = [40000. 40000. 40000.]
+yt : [INFO     ] 2026-03-23 11:02:57,251 Parameters: cosmological_simulation   = True
+yt : [INFO     ] 2026-03-23 11:02:57,251 Parameters: current_redshift          = 17.37097422132927
+yt : [INFO     ] 2026-03-23 11:02:57,251 Parameters: omega_lambda              = 0.685
+yt : [INFO     ] 2026-03-23 11:02:57,251 Parameters: omega_matter              = 0.315
+yt : [INFO     ] 2026-03-23 11:02:57,251 Parameters: omega_radiation           = 0.0
+yt : [INFO     ] 2026-03-23 11:02:57,251 Parameters: hubble_constant           = 0.674
+yt : [INFO     ] 2026-03-23 11:02:57,435 Allocating for 5.85e+07 particles
+
+------ DEBUG SNAPSHOT 100  GALAXY 52  ------
+z = 17.54793369979349
+BH id: 119306686
+BH Type: MBH
+Sink position (code units): [(20015.60880040327, 20139.72405247638, 19633.342937705358)]
+Center (code units): [20000.57751035 20108.65071618 19681.55874536]
+Center (kpc): [1599.87909461 1608.52404812 1574.36025884]
+BH StellarMass (code): 0.0013599267281481921
+BH Mass (Msun): 20176954.42356368
+Metallicity mass-weighted: 0.23659099480752474
+Metallicity min: 2.672251665729505e-08
+Metallicity max: 28.613819286912996
+Gas mass: 54854665.16272751
+Loading particle index:   0%|          | 0/128 [00:00<?, ?it/s]Loading particle index:  52%|█████▏    | 66/128 [00:00<00:00, 655.86it/s]Loading particle index: 100%|██████████| 128/128 [00:00<00:00, 616.30it/s]
+[11:02:58] INFO: [Snapshot 101] Preloading particle fields...
+[11:03:02] INFO: [Snapshot 91] Unique galaxies: 1
+[11:03:02] INFO: [Snapshot 101] Unique galaxies: 1
+[11:03:03] INFO: [Snapshot 103] Loading snapshot...
+yt : [INFO     ] 2026-03-23 11:03:03,630 Calculating time from 5.522e-02 to be 7.056e+15 seconds
+yt : [INFO     ] 2026-03-23 11:03:03,661 Parameters: current_time              = 7056465183756307.0 s
+yt : [INFO     ] 2026-03-23 11:03:03,661 Parameters: domain_dimensions         = [1 1 1]
+yt : [INFO     ] 2026-03-23 11:03:03,661 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2026-03-23 11:03:03,661 Parameters: domain_right_edge         = [40000. 40000. 40000.]
+yt : [INFO     ] 2026-03-23 11:03:03,661 Parameters: cosmological_simulation   = True
+yt : [INFO     ] 2026-03-23 11:03:03,661 Parameters: current_redshift          = 17.10869554474452
+yt : [INFO     ] 2026-03-23 11:03:03,661 Parameters: omega_lambda              = 0.685
+yt : [INFO     ] 2026-03-23 11:03:03,661 Parameters: omega_matter              = 0.315
+yt : [INFO     ] 2026-03-23 11:03:03,661 Parameters: omega_radiation           = 0.0
+yt : [INFO     ] 2026-03-23 11:03:03,661 Parameters: hubble_constant           = 0.674
+yt : [INFO     ] 2026-03-23 11:03:03,842 Allocating for 5.859e+07 particles
+
+------ DEBUG SNAPSHOT 102  GALAXY 57  ------
+z = 17.28312860859068
+BH id: 119306686
+BH Type: MBH
+Sink position (code units): [(20015.60880040327, 20139.72405247638, 19633.342937705358)]
+Center (code units): [20002.43976718 20111.83885028 19677.08644983]
+Center (kpc): [1623.20218834 1632.07994692 1596.79969831]
+BH StellarMass (code): 0.0013599267281481921
+BH Mass (Msun): 20176954.42356368
+Metallicity mass-weighted: 0.2125864311495101
+Metallicity min: 5.766678702234722e-09
+Metallicity max: 11.924676070869374
+Gas mass: 56731302.018222354
+Loading particle index:   0%|          | 0/128 [00:00<?, ?it/s]Loading particle index:  52%|█████▏    | 67/128 [00:00<00:00, 661.50it/s][11:03:04] INFO: [Snapshot 97] Loading snapshot...
+yt : [INFO     ] 2026-03-23 11:03:04,061 Calculating time from 5.289e-02 to be 6.614e+15 seconds
+Loading particle index: 100%|██████████| 128/128 [00:00<00:00, 623.23it/s]
+yt : [INFO     ] 2026-03-23 11:03:04,083 Parameters: current_time              = 6614359900155859.0 s
+yt : [INFO     ] 2026-03-23 11:03:04,083 Parameters: domain_dimensions         = [1 1 1]
+yt : [INFO     ] 2026-03-23 11:03:04,083 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2026-03-23 11:03:04,083 Parameters: domain_right_edge         = [40000. 40000. 40000.]
+yt : [INFO     ] 2026-03-23 11:03:04,083 Parameters: cosmological_simulation   = True
+yt : [INFO     ] 2026-03-23 11:03:04,083 Parameters: current_redshift          = 17.906982793544053
+yt : [INFO     ] 2026-03-23 11:03:04,083 Parameters: omega_lambda              = 0.685
+yt : [INFO     ] 2026-03-23 11:03:04,083 Parameters: omega_matter              = 0.315
+yt : [INFO     ] 2026-03-23 11:03:04,083 Parameters: omega_radiation           = 0.0
+yt : [INFO     ] 2026-03-23 11:03:04,083 Parameters: hubble_constant           = 0.674
+yt : [INFO     ] 2026-03-23 11:03:04,264 Allocating for 5.836e+07 particles
+
+------ DEBUG SNAPSHOT 97  GALAXY 37  ------
+z = 17.906982793544053
+BH id: 102573735
+BH Type: MBH
+Sink position (code units): [(20015.910177339487, 20139.559496560596, 19633.40342770317)]
+Center (code units): [19998.41782556 20105.73496276 19687.56025741]
+Center (kpc): [1569.32744997 1577.74890264 1544.93365447]
+BH StellarMass (code): 0.002501391124038771
+BH Mass (Msun): 37112627.95309749
+Metallicity mass-weighted: 0.27408653810939937
+Metallicity min: 1.011950016187626e-06
+Metallicity max: 25.617186210357318
+Gas mass: 50135223.35986212
+Loading particle index:   0%|          | 0/128 [00:00<?, ?it/s]Loading particle index:  54%|█████▍    | 69/128 [00:00<00:00, 686.00it/s]Loading particle index: 100%|██████████| 128/128 [00:00<00:00, 641.24it/s]
+[11:03:04] INFO: [Snapshot 103] Preloading particle fields...
+[11:03:04] INFO: [Snapshot 97] Preloading particle fields...
+[11:03:08] INFO: [Snapshot 103] Unique galaxies: 1
+[11:03:09] INFO: [Snapshot 97] Unique galaxies: 1
+[11:03:11] INFO: [Snapshot 101] Loading snapshot...
+yt : [INFO     ] 2026-03-23 11:03:11,177 Calculating time from 5.443e-02 to be 6.906e+15 seconds
+yt : [INFO     ] 2026-03-23 11:03:11,207 Parameters: current_time              = 6905908014305612.0 s
+yt : [INFO     ] 2026-03-23 11:03:11,207 Parameters: domain_dimensions         = [1 1 1]
+yt : [INFO     ] 2026-03-23 11:03:11,207 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2026-03-23 11:03:11,207 Parameters: domain_right_edge         = [40000. 40000. 40000.]
+yt : [INFO     ] 2026-03-23 11:03:11,207 Parameters: cosmological_simulation   = True
+yt : [INFO     ] 2026-03-23 11:03:11,207 Parameters: current_redshift          = 17.37097422132927
+yt : [INFO     ] 2026-03-23 11:03:11,207 Parameters: omega_lambda              = 0.685
+yt : [INFO     ] 2026-03-23 11:03:11,207 Parameters: omega_matter              = 0.315
+yt : [INFO     ] 2026-03-23 11:03:11,207 Parameters: omega_radiation           = 0.0
+yt : [INFO     ] 2026-03-23 11:03:11,207 Parameters: hubble_constant           = 0.674
+yt : [INFO     ] 2026-03-23 11:03:11,388 Allocating for 5.85e+07 particles
+
+------ DEBUG SNAPSHOT 101  GALAXY 53  ------
+z = 17.37097422132927
+BH id: 123556637
+BH Type: MBH
+Sink position (code units): [(20015.995694503268, 20139.381471569774, 19633.28067807003)]
+Center (code units): [20002.19265311 20110.99978662 19678.59201792]
+Center (kpc): [1615.42046554 1624.20796566 1589.28577632]
+BH StellarMass (code): 0.001654043851100842
+BH Mass (Msun): 24540709.956985787
+Metallicity mass-weighted: 0.22017905954951672
+Metallicity min: 2.27011034599115e-09
+Metallicity max: 16.596131305849568
+Gas mass: 56314424.22696623
+Loading particle index:   0%|          | 0/128 [00:00<?, ?it/s]Loading particle index:  52%|█████▏    | 67/128 [00:00<00:00, 664.15it/s]Loading particle index: 100%|██████████| 128/128 [00:00<00:00, 615.49it/s]
+[11:03:12] INFO: [Snapshot 101] Preloading particle fields...
+[11:03:16] INFO: [Snapshot 101] Unique galaxies: 1
+[11:03:17] INFO: [Snapshot 103] Loading snapshot...
+yt : [INFO     ] 2026-03-23 11:03:17,433 Calculating time from 5.522e-02 to be 7.056e+15 seconds
+yt : [INFO     ] 2026-03-23 11:03:17,463 Parameters: current_time              = 7056465183756307.0 s
+yt : [INFO     ] 2026-03-23 11:03:17,463 Parameters: domain_dimensions         = [1 1 1]
+yt : [INFO     ] 2026-03-23 11:03:17,463 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2026-03-23 11:03:17,463 Parameters: domain_right_edge         = [40000. 40000. 40000.]
+yt : [INFO     ] 2026-03-23 11:03:17,464 Parameters: cosmological_simulation   = True
+yt : [INFO     ] 2026-03-23 11:03:17,464 Parameters: current_redshift          = 17.10869554474452
+yt : [INFO     ] 2026-03-23 11:03:17,464 Parameters: omega_lambda              = 0.685
+yt : [INFO     ] 2026-03-23 11:03:17,464 Parameters: omega_matter              = 0.315
+yt : [INFO     ] 2026-03-23 11:03:17,464 Parameters: omega_radiation           = 0.0
+yt : [INFO     ] 2026-03-23 11:03:17,464 Parameters: hubble_constant           = 0.674
+yt : [INFO     ] 2026-03-23 11:03:17,644 Allocating for 5.859e+07 particles
+
+------ DEBUG SNAPSHOT 103  GALAXY 58  ------
+z = 17.10869554474452
+BH id: 102693011
+BH Type: MBH
+Sink position (code units): [(20016.029002518593, 20139.777910373785, 19633.600442276856)]
+Center (code units): [20003.54925632 20113.52717147 19673.91656118]
+Center (kpc): [1638.92868045 1647.93937935 1611.92124936]
+BH StellarMass (code): 0.0010787875319753957
+BH Mass (Msun): 16005749.732572636
+Metallicity mass-weighted: 0.20326576978637326
+Metallicity min: 7.22861402159609e-07
+Metallicity max: 8.066278179256484
+Gas mass: 59940148.08137323
+Loading particle index:   0%|          | 0/128 [00:00<?, ?it/s]Loading particle index:  51%|█████     | 65/128 [00:00<00:00, 649.87it/s]Loading particle index: 100%|██████████| 128/128 [00:00<00:00, 615.30it/s]
+[11:03:17] INFO: [Snapshot 98] Loading snapshot...
+yt : [INFO     ] 2026-03-23 11:03:18,013 Calculating time from 5.314e-02 to be 6.662e+15 seconds
+yt : [INFO     ] 2026-03-23 11:03:18,043 Parameters: current_time              = 6662082334475839.0 s
+yt : [INFO     ] 2026-03-23 11:03:18,043 Parameters: domain_dimensions         = [1 1 1]
+yt : [INFO     ] 2026-03-23 11:03:18,044 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2026-03-23 11:03:18,044 Parameters: domain_right_edge         = [40000. 40000. 40000.]
+yt : [INFO     ] 2026-03-23 11:03:18,044 Parameters: cosmological_simulation   = True
+yt : [INFO     ] 2026-03-23 11:03:18,044 Parameters: current_redshift          = 17.816574115782778
+yt : [INFO     ] 2026-03-23 11:03:18,044 Parameters: omega_lambda              = 0.685
+yt : [INFO     ] 2026-03-23 11:03:18,044 Parameters: omega_matter              = 0.315
+yt : [INFO     ] 2026-03-23 11:03:18,044 Parameters: omega_radiation           = 0.0
+yt : [INFO     ] 2026-03-23 11:03:18,044 Parameters: hubble_constant           = 0.674
+yt : [INFO     ] 2026-03-23 11:03:18,226 Allocating for 5.837e+07 particles
+
+------ DEBUG SNAPSHOT 97  GALAXY 38  ------
+z = 17.906982793544053
+BH id: 123556637
+BH Type: MBH
+Sink position (code units): [(20015.995694503268, 20139.381471569774, 19633.28067807003)]
+Center (code units): [19998.18136154 20105.75329711 19687.65527625]
+Center (kpc): [1569.30889403 1577.75034139 1544.94111084]
+BH StellarMass (code): 0.001654043851100842
+BH Mass (Msun): 24540709.956985787
+Metallicity mass-weighted: 0.27429915551472744
+Metallicity min: 1.011950016187626e-06
+Metallicity max: 25.617186210357318
+Gas mass: 50020299.96026895
+Loading particle index:   0%|          | 0/128 [00:00<?, ?it/s][11:03:18] INFO: [Snapshot 103] Preloading particle fields...
+Loading particle index:  53%|█████▎    | 68/128 [00:00<00:00, 676.88it/s]Loading particle index: 100%|██████████| 128/128 [00:00<00:00, 631.82it/s]
+[11:03:18] INFO: [Snapshot 98] Preloading particle fields...
+[11:03:22] INFO: [Snapshot 103] Unique galaxies: 1
+[11:03:23] INFO: [Snapshot 98] Unique galaxies: 1
+[11:03:23] INFO: [Snapshot 104] Loading snapshot...
+[11:03:25] INFO: [Snapshot 101] Loading snapshot...
+yt : [INFO     ] 2026-03-23 11:03:25,167 Calculating time from 5.443e-02 to be 6.906e+15 seconds
+yt : [INFO     ] 2026-03-23 11:03:25,193 Parameters: current_time              = 6905908014305612.0 s
+yt : [INFO     ] 2026-03-23 11:03:25,193 Parameters: domain_dimensions         = [1 1 1]
+yt : [INFO     ] 2026-03-23 11:03:25,193 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2026-03-23 11:03:25,193 Parameters: domain_right_edge         = [40000. 40000. 40000.]
+yt : [INFO     ] 2026-03-23 11:03:25,193 Parameters: cosmological_simulation   = True
+yt : [INFO     ] 2026-03-23 11:03:25,193 Parameters: current_redshift          = 17.37097422132927
+yt : [INFO     ] 2026-03-23 11:03:25,193 Parameters: omega_lambda              = 0.685
+yt : [INFO     ] 2026-03-23 11:03:25,193 Parameters: omega_matter              = 0.315
+yt : [INFO     ] 2026-03-23 11:03:25,193 Parameters: omega_radiation           = 0.0
+yt : [INFO     ] 2026-03-23 11:03:25,193 Parameters: hubble_constant           = 0.674
+yt : [INFO     ] 2026-03-23 11:03:25,377 Allocating for 5.85e+07 particles
+
+------ DEBUG SNAPSHOT 101  GALAXY 54  ------
+z = 17.37097422132927
+BH id: 136782684
+BH Type: MBH
+Sink position (code units): [(20015.91825759488, 20139.229346795782, 19633.13114117828)]
+Center (code units): [20002.09074818 20109.83345421 19679.0941116 ]
+Center (kpc): [1615.41223548 1624.11377013 1589.3263265 ]
+BH StellarMass (code): 0.00037501185487268546
+BH Mass (Msun): 5563974.1079033455
+Metallicity mass-weighted: 0.22035299535010677
+Metallicity min: 2.27011034599115e-09
+Metallicity max: 16.596131305849568
+Gas mass: 56080589.75202639
+Loading particle index:   0%|          | 0/128 [00:00<?, ?it/s]Loading particle index:  52%|█████▏    | 67/128 [00:00<00:00, 666.55it/s]Loading particle index: 100%|██████████| 128/128 [00:00<00:00, 615.60it/s]
+[11:03:26] INFO: [Snapshot 101] Preloading particle fields...
+yt : [INFO     ] 2026-03-23 11:03:26,387 Calculating time from 5.549e-02 to be 7.107e+15 seconds
+yt : [INFO     ] 2026-03-23 11:03:26,430 Parameters: current_time              = 7107376633636195.0 s
+yt : [INFO     ] 2026-03-23 11:03:26,430 Parameters: domain_dimensions         = [1 1 1]
+yt : [INFO     ] 2026-03-23 11:03:26,430 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2026-03-23 11:03:26,430 Parameters: domain_right_edge         = [40000. 40000. 40000.]
+yt : [INFO     ] 2026-03-23 11:03:26,431 Parameters: cosmological_simulation   = True
+yt : [INFO     ] 2026-03-23 11:03:26,431 Parameters: current_redshift          = 17.022104086019496
+yt : [INFO     ] 2026-03-23 11:03:26,431 Parameters: omega_lambda              = 0.685
+yt : [INFO     ] 2026-03-23 11:03:26,431 Parameters: omega_matter              = 0.315
+yt : [INFO     ] 2026-03-23 11:03:26,431 Parameters: omega_radiation           = 0.0
+yt : [INFO     ] 2026-03-23 11:03:26,431 Parameters: hubble_constant           = 0.674
+yt : [INFO     ] 2026-03-23 11:03:26,619 Allocating for 5.862e+07 particles
+Loading particle index:   0%|          | 0/128 [00:00<?, ?it/s]Loading particle index:  49%|████▉     | 63/128 [00:00<00:00, 627.08it/s]Loading particle index:  98%|█████████▊| 126/128 [00:00<00:00, 596.34it/s]Loading particle index: 100%|██████████| 128/128 [00:00<00:00, 596.20it/s]
+[11:03:30] INFO: [Snapshot 101] Unique galaxies: 1
+[11:03:31] INFO: [Snapshot 103] Loading snapshot...
+yt : [INFO     ] 2026-03-23 11:03:31,222 Calculating time from 5.522e-02 to be 7.056e+15 seconds
+yt : [INFO     ] 2026-03-23 11:03:31,248 Parameters: current_time              = 7056465183756307.0 s
+yt : [INFO     ] 2026-03-23 11:03:31,248 Parameters: domain_dimensions         = [1 1 1]
+yt : [INFO     ] 2026-03-23 11:03:31,248 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2026-03-23 11:03:31,248 Parameters: domain_right_edge         = [40000. 40000. 40000.]
+yt : [INFO     ] 2026-03-23 11:03:31,248 Parameters: cosmological_simulation   = True
+yt : [INFO     ] 2026-03-23 11:03:31,248 Parameters: current_redshift          = 17.10869554474452
+yt : [INFO     ] 2026-03-23 11:03:31,248 Parameters: omega_lambda              = 0.685
+yt : [INFO     ] 2026-03-23 11:03:31,248 Parameters: omega_matter              = 0.315
+yt : [INFO     ] 2026-03-23 11:03:31,248 Parameters: omega_radiation           = 0.0
+yt : [INFO     ] 2026-03-23 11:03:31,248 Parameters: hubble_constant           = 0.674
+yt : [INFO     ] 2026-03-23 11:03:31,430 Allocating for 5.859e+07 particles
+
+------ DEBUG SNAPSHOT 103  GALAXY 59  ------
+z = 17.10869554474452
+BH id: 102573735
+BH Type: MBH
+Sink position (code units): [(20015.910177339487, 20139.559496560596, 19633.40342770317)]
+Center (code units): [20003.67515991 20113.56506814 19674.22373549]
+Center (kpc): [1638.93899597 1647.9424843  1611.94641673]
+BH StellarMass (code): 0.002501391124038771
+BH Mass (Msun): 37112627.95309749
+Metallicity mass-weighted: 0.20345270025628875
+Metallicity min: 7.22861402159609e-07
+Metallicity max: 8.066278179256484
+Gas mass: 59942469.57905341
+Loading particle index:   0%|          | 0/128 [00:00<?, ?it/s]Loading particle index:  52%|█████▏    | 66/128 [00:00<00:00, 651.22it/s]Loading particle index: 100%|██████████| 128/128 [00:00<00:00, 631.37it/s]
+[11:03:32] INFO: [Snapshot 103] Preloading particle fields...
+[11:03:33] INFO: [Snapshot 98] Loading snapshot...
+yt : [INFO     ] 2026-03-23 11:03:33,650 Calculating time from 5.314e-02 to be 6.662e+15 seconds
+[11:03:33] INFO: [Snapshot 104] Preloading particle fields...
+yt : [INFO     ] 2026-03-23 11:03:33,849 Parameters: current_time              = 6662082334475839.0 s
+yt : [INFO     ] 2026-03-23 11:03:33,849 Parameters: domain_dimensions         = [1 1 1]
+yt : [INFO     ] 2026-03-23 11:03:33,850 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2026-03-23 11:03:33,851 Parameters: domain_right_edge         = [40000. 40000. 40000.]
+yt : [INFO     ] 2026-03-23 11:03:33,851 Parameters: cosmological_simulation   = True
+yt : [INFO     ] 2026-03-23 11:03:33,852 Parameters: current_redshift          = 17.816574115782778
+yt : [INFO     ] 2026-03-23 11:03:33,852 Parameters: omega_lambda              = 0.685
+yt : [INFO     ] 2026-03-23 11:03:33,852 Parameters: omega_matter              = 0.315
+yt : [INFO     ] 2026-03-23 11:03:33,852 Parameters: omega_radiation           = 0.0
+yt : [INFO     ] 2026-03-23 11:03:33,852 Parameters: hubble_constant           = 0.674
+yt : [INFO     ] 2026-03-23 11:03:35,281 Allocating for 5.837e+07 particles
+
+------ DEBUG SNAPSHOT 98  GALAXY 41  ------
+z = 17.816574115782778
+BH id: 123556637
+BH Type: MBH
+Sink position (code units): [(20015.995694503268, 20139.381471569774, 19633.28067807003)]
+Center (code units): [19999.14859035 20106.6317968  19686.26122785]
+Center (kpc): [1576.92527515 1585.40028518 1552.25422538]
+BH StellarMass (code): 0.001654043851100842
+BH Mass (Msun): 24540709.956985787
+Metallicity mass-weighted: 0.26203470332037676
+Metallicity min: 8.06445453149236e-07
+Metallicity max: 37.214062641154094
+Gas mass: 52025865.30189434
+Loading particle index:   0%|          | 0/128 [00:00<?, ?it/s]Loading particle index:  11%|█         | 14/128 [00:00<00:00, 131.75it/s]Loading particle index:  22%|██▏       | 28/128 [00:00<00:01, 90.94it/s] Loading particle index:  30%|██▉       | 38/128 [00:00<00:01, 87.56it/s]Loading particle index:  38%|███▊      | 48/128 [00:00<00:00, 86.52it/s]Loading particle index:  45%|████▍     | 57/128 [00:00<00:00, 84.44it/s]Loading particle index:  52%|█████▏    | 66/128 [00:00<00:00, 83.04it/s]Loading particle index:  59%|█████▊    | 75/128 [00:00<00:00, 80.91it/s]Loading particle index:  66%|██████▌   | 84/128 [00:00<00:00, 79.33it/s]Loading particle index:  72%|███████▏  | 92/128 [00:01<00:00, 69.66it/s][11:03:36] INFO: [Snapshot 103] Unique galaxies: 1
+Loading particle index:  79%|███████▉  | 101/128 [00:01<00:00, 73.67it/s]Loading particle index:  85%|████████▌ | 109/128 [00:01<00:00, 74.11it/s]Loading particle index:  92%|█████████▏| 118/128 [00:01<00:00, 76.92it/s]Loading particle index:  99%|█████████▉| 127/128 [00:01<00:00, 78.48it/s]Loading particle index: 100%|██████████| 128/128 [00:01<00:00, 80.25it/s]
+[11:03:38] INFO: [Snapshot 104] Unique galaxies: 1
+[11:03:38] WARNING: [Snapshot 101] BH id 102934620 not found in sinks. Skipping galaxy 55.
+[11:03:40] INFO: [Snapshot 98] Preloading particle fields...
+[11:03:45] INFO: [Snapshot 103] Loading snapshot...
+yt : [INFO     ] 2026-03-23 11:03:45,089 Calculating time from 5.522e-02 to be 7.056e+15 seconds
+yt : [INFO     ] 2026-03-23 11:03:45,112 Parameters: current_time              = 7056465183756307.0 s
+yt : [INFO     ] 2026-03-23 11:03:45,112 Parameters: domain_dimensions         = [1 1 1]
+yt : [INFO     ] 2026-03-23 11:03:45,112 Parameters: domain_left_edge          = [0. 0. 0.]
+yt : [INFO     ] 2026-03-23 11:03:45,112 Parameters: domain_right_edge         = [40000. 40000. 40000.]
+yt : [INFO     ] 2026-03-23 11:03:45,112 Parameters: cosmological_simulation   = True
+yt : [INFO     ] 2026-03-23 11:03:45,112 Parameters: current_redshift          = 17.10869554474452
+yt : [INFO     ] 2026-03-23 11:03:45,112 Parameters: omega_lambda              = 0.685
+yt : [INFO     ] 2026-03-23 11:03:45,112 Parameters: omega_matter              = 0.315
+yt : [INFO     ] 2026-03-23 11:03:45,112 Parameters: omega_radiation           = 0.0
+yt : [INFO     ] 2026-03-23 11:03:45,112 Parameters: hubble_constant           = 0.674
+yt : [INFO     ] 2026-03-23 11:03:45,292 Allocating for 5.859e+07 particles
+
+------ DEBUG SNAPSHOT 103  GALAXY 60  ------
+z = 17.10869554474452
+BH id: 102573735
+BH Type: MBH
+Sink position (code units): [(20015.910177339487, 20139.559496560596, 19633.40342770317)]
+Center (code units): [20003.67515991 20113.56506814 19674.22373549]
+Center (kpc): [1638.93899597 1647.9424843  1611.94641673]
+BH StellarMass (code): 0.002501391124038771
+BH Mass (Msun): 37112627.95309749
+Metallicity mass-weighted: 0.20345270025628875
+Metallicity min: 7.22861402159609e-07
+Metallicity max: 8.066278179256484
+Gas mass: 59942469.57905341
+Loading particle index:   0%|          | 0/128 [00:00<?, ?it/s]Loading particle index:  58%|█████▊    | 74/128 [00:00<00:00, 731.10it/s]Loading particle index: 100%|██████████| 128/128 [00:00<00:00, 665.44it/s]
+[11:03:45] INFO: [Snapshot 103] Preloading particle fields...

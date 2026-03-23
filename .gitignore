@@ -205,3 +205,22 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+
+# ----------------------------------------------------------------------
+# User rules: ignore unwanted outputs
+# ----------------------------------------------------------------------
+
+*.log
+*.txt
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.pdf
+
+# If you also want to ignore ALL large data files except .hdf5/.pkl:
+# *.dat
+# *.fits
+# *.csv
+# *.out

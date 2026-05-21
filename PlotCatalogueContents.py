@@ -19,15 +19,16 @@ def load_catalog(filename):
         # --- Galaxy properties ---
         Z = np.array(f["HostGalaxy"]["HostGalaxyMetallicity"])
         MStellar = np.array(f["HostGalaxy"]["HostGalaxyStellarMass"])
+        Redshift = np.array(f["HostGalaxy"]["HostGalaxyRedshift"])
 
-    return BH_Primary, BH_Secondary, Z, MStellar
+    return BH_Primary, BH_Secondary, Z, MStellar, Redshift
 
 
 # ============================================================
 # PLOTTING
 # ============================================================
 
-def make_plots(BH_Primary, BH_Secondary, Z, MStellar):
+def make_plots(BH_Primary, BH_Secondary, Z, MStellar, Redshift):
 
     # ---- Mask invalid values ----
     mask = (BH_Primary > 0) & (BH_Secondary > 0) & (Z > 0) & (MStellar > 0) & \
@@ -41,8 +42,9 @@ def make_plots(BH_Primary, BH_Secondary, Z, MStellar):
     RemnantBHMass = BH_Primary[mask] + BH_Secondary[mask]
     Z  = Z[mask]
     MStellar = MStellar[mask]
+    Redshift = Redshift[mask]
 
-    logging.info(f"Number of valid systems: {len(BH_Primary)}")
+    logging.info(f"Number of merger systems: {len(BH_Primary)}")
 
     # ---- Plot 1: BH Mass vs Metallicity ----
     plt.figure(figsize=(8,6))
@@ -56,7 +58,6 @@ def make_plots(BH_Primary, BH_Secondary, Z, MStellar):
 
     plt.tight_layout()
     plt.savefig("Catalogue_BHMass_Metallicity.png")
-    logging.info("Saved BHMass_vs_Metallicity.png")
 
     # ---- Plot 2: BH Mass vs Stellar Mass ----
     plt.figure(figsize=(8,6))
@@ -69,7 +70,18 @@ def make_plots(BH_Primary, BH_Secondary, Z, MStellar):
 
     plt.tight_layout()
     plt.savefig("Catalogue_BHMass_StellarMass.png")
-    logging.info("Saved BHMass_vs_StellarMass.png")
+
+    # ---- Plot 3: BH Mass vs Merger Redshift ----
+    plt.figure(figsize=(8,6))
+    plt.scatter(Redshift, RemnantBHMass, s=20, alpha=0.7, color="tab:blue")
+    plt.yscale("log")
+
+    plt.xlabel(r"Redshift")
+    plt.ylabel(r"BH Remnant Mass [$M_\odot$]")
+
+    plt.tight_layout()
+    plt.savefig("Catalogue_BHMass_Redshift.png")
+
 
 
 # ============================================================
@@ -80,7 +92,11 @@ if __name__ == "__main__":
 
     filename = "SEEDZ/Catalogues/MBH_Environment_Catalog_SEEDZ.hdf5"  # change to your actual file name
 
+    print("Available Datasets:\n")
+    with h5py.File(filename, 'r') as f:
+        f.visit(print)
+    print("\n")
     logging.info(f"Reading catalog: {filename}")
-    BH_Primary, BH_Secondary, Z, MStellar = load_catalog(filename)
+    BH_Primary, BH_Secondary, Z, MStellar, Redshift = load_catalog(filename)
 
-    make_plots(BH_Primary, BH_Secondary, Z, MStellar)
+    make_plots(BH_Primary, BH_Secondary, Z, MStellar, Redshift)

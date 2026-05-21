@@ -12,7 +12,6 @@ import struct
 import pickle
 import numpy as np
 
-HUBBLE_PARAMETER = 0.67
 
 # ---------------------------------------------------------------------------
 # Type and SNeType functions (provided by simulation codebase)
@@ -59,13 +58,13 @@ def build_struct_format(feedback=False, array_length=1):
 # Main parser
 # ---------------------------------------------------------------------------
 
-def read_sink_info(base, feedback=False, array_length=1, hubble_parameter=0.6774):
+def read_sink_info(snap_base, cwd_base, feedback=False, array_length=1, hubble_parameter=0.6774):
 
     struct_format, struct_size = build_struct_format(feedback, array_length)
 
-    sink_base       = os.path.join(base, "sink_particle_info/")
-    pickle_file     = os.path.join(base, "sink_particle.pkl")
-    pickle_file_popii = os.path.join(base, "popii_particles.pkl")
+    sink_base       = os.path.join(snap_base, "sink_particle_info/")
+    pickle_file     = os.path.join(cwd_base, "sink_particle.pkl")
+    pickle_file_popii = os.path.join(cwd_base, "popii_particles.pkl")
 
     files = sorted(os.listdir(sink_base))
 
@@ -105,7 +104,7 @@ def read_sink_info(base, feedback=False, array_length=1, hubble_parameter=0.6774
     # ------------------------------------------------------------------
     for fname in files_to_process:
         filepath = os.path.join(sink_base, fname)
-        print(f"Opening file: {filepath}")
+        print(f"Opening file: {filepath}\n")
 
         with open(filepath, "rb") as f:
             while True:
@@ -130,7 +129,7 @@ def read_sink_info(base, feedback=False, array_length=1, hubble_parameter=0.6774
                     f.seek(struct_size * num_sinks, 1)
                     continue
 
-                print(f"  Time: {time:.6f} | Sink particles: {num_sinks}")
+                #print(f"\r  Time: {time:.6f} | Sink particles: {num_sinks}")
 
                 for _ in range(num_sinks):
                     try:
@@ -162,7 +161,7 @@ def read_sink_info(base, feedback=False, array_length=1, hubble_parameter=0.6774
                     # PopIII (0) and MBH (3) -> sink_particles
                     if entry["Type"] in (0, 3):
                         if sink_id not in sink_particles:
-                            print(f"  Adding sink particle ID {sink_id} (Type {entry['Type']})")
+                            print(f"\r  Adding particles: PopIII/MBHs: {len(sink_particles)} PopII: {len(popii_particles)} ", end="", flush=True)
                             sink_particles[sink_id] = {
                                 "meta": {
                                     "StellarLifeTime": data[19],
@@ -178,7 +177,7 @@ def read_sink_info(base, feedback=False, array_length=1, hubble_parameter=0.6774
                     # PopII (2) -> popii_particles
                     elif entry["Type"] == 2:
                         if sink_id not in popii_particles:
-                            print(f"  Adding PopII particle ID {sink_id}")
+                            print(f"\r  Adding particles: PopIII/MBHs: {len(sink_particles)} PopII: {len(popii_particles)} ", end="", flush=True)
                             popii_particles[sink_id] = {
                                 "meta": {
                                     "StellarLifeTime": data[19],
@@ -247,11 +246,18 @@ def read_sink_info(base, feedback=False, array_length=1, hubble_parameter=0.6774
 # ---------------------------------------------------------------------------
 # Entry point — edit these variables before running
 # ---------------------------------------------------------------------------
-
 if __name__ == "__main__":
-    BASE             = "/home/daxal/data/ProductionRuns/Renaissance/NoFeedback/"
-    FEEDBACK         = False
-    ARRAY_LENGTH     = 1                       # 1 or 350
-    HUBBLE_PARAMETER = 0.6774                  # e.g. Planck 2015 value
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument("snap_base", help="Path to simulation snapshot directory")
+    args = parser.parse_args()
 
-    read_sink_info(base=BASE, feedback=FEEDBACK, array_length=ARRAY_LENGTH, hubble_parameter=HUBBLE_PARAMETER)
+    CWD_BASE         = "./"
+    FEEDBACK         = False
+    ARRAY_LENGTH     = 1
+    HUBBLE_PARAMETER = 0.6774
+
+    read_sink_info(snap_base=args.snap_base, cwd_base=CWD_BASE,
+                   feedback=FEEDBACK, array_length=ARRAY_LENGTH,
+                   hubble_parameter=HUBBLE_PARAMETER)
+

@@ -122,5 +122,5 @@ def plot_mergers(base, outfile="mergers.pkl", m2_threshold=1000.0):
 
 
 if __name__ == "__main__":
-    base = "/home/jregan/data/Analysis/ArepoYTAnalysis/MBHEnvironments/MBH_Environments/SEEDZ/Code/test/"
+    base = "./"
     plot_mergers(base)

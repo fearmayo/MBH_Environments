@@ -118,6 +118,10 @@ def build_merger_galaxies(
 
 
 if __name__ == "__main__":
-    pkl_base = "/home/jregan/data/Analysis/ArepoYTAnalysis/MBHEnvironments/MBH_Environments/SEEDZ/Code/test/"
-    snap_base = "/home/daxal/data/ProductionRuns/Renaissance/NoFeedback/"
-    build_merger_galaxies(pkl_base, snap_base)
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument("snap_base", help="Path to simulation snapshot directory")
+    args = parser.parse_args()
+    pkl_base = "./"
+
+    build_merger_galaxies(pkl_base, args.snap_base)

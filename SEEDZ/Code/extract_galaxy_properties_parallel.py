@@ -382,6 +382,10 @@ def extract_galaxy_properties(
 
 # ============================================================
 if __name__ == "__main__":
-    snap_base = "/home/daxal/data/ProductionRuns/Renaissance/NoFeedback/"
-    base = "./test/"
-    extract_galaxy_properties(snap_base, base)
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument("snap_base", help="Path to simulation snapshot directory")
+    args = parser.parse_args()
+    base = "./"
+
+    extract_galaxy_properties(args.snap_base, base)

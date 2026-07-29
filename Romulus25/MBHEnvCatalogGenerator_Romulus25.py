@@ -194,9 +194,7 @@ def get_binary_information(metadata):
     import pandas as pd
 
     # read in pre-existing catalog object
-    bhcat = pd.read_pickle('./pklfiles/BHCatalog_Romulus25_29April2026.pkl')
-    bhmergers = bhcat.mergers
-    bhorbits = bhcat.orbitdata
+    bhmergers = pd.read_pickle('./pklfiles/BHmergers_HostInfo_Strict_v2.1.pkl')
 
     N_binaries = len(bhmergers['ID1'])
 
@@ -206,7 +204,7 @@ def get_binary_information(metadata):
     m2 = bhmergers['merge_mass_2'] # Msun
     m1, m2 = np.max([m1, m2], axis=0), np.min([m1, m2], axis=0)
     z = bhmergers['redshift']
-    sepa = np.nan * np.ones(len(N_binaries)) ########################## get final_dist_pc
+    sepa = bhmergers['final_dist_pc'] / 1000 # kpc
     # number density
     W = 1/metadata["BoxSize"]**3*np.ones(len(m1))
     
@@ -214,14 +212,14 @@ def get_binary_information(metadata):
     #Host galaxy properties
 
     # generate fake binary-host galaxy-remnant properties
-    galid = galid
+    galid = bhmergers['HostID']
     sfr = {}
-    mstar = np.random.normal(loc=1e10, scale=1e8, size=N_binaries)
-    mdm = mstar * np.maximum(1.0, np.random.normal(loc=10.0, scale=1.0, size=N_binaries))
-    zgal = z - np.random.uniform(0, 0.001, size=N_binaries)
-    R50 = np.random.normal(loc=3, scale=0.1, size=N_binaries)
-    metallicity =  np.random.normal(loc=1e10, scale=1e8, size=N_binaries)
-    galpos = "central"
+    mstar = bhmergers['HostMstar']
+    mdm = bhmergers['HostMdm']
+    zgal = bhmergers['HostRedshift']
+    R50 = bhmergers['R50']
+    metallicity =  np.random.normal(loc=1e10, scale=1e8, size=N_binaries) ############################ need to get host metallicity
+    galpos = np.array(["central"] * N_binaries, dtype="S")
    
     # FILL METADATA INFO
     # total number of merged binaries assuming no delays
@@ -229,13 +227,12 @@ def get_binary_information(metadata):
 
     # provide an explanation of the merger criterion, modify the string
     metadata['MergerCriteria'] = (
-        "mergers occur when two MBH particles come within a gravitational softening length of "
-        "eachother, and the kinetic energy of the pair is less than the gravitational "
+        "mergers occur when two MBH particles come within 2 gravitational softening lengths of "
+        "eachother (e_soft = 350pc), and the kinetic energy of the pair is less than the gravitational "
         "potential energy between them.")
     
     metadata['Comments'] = (
-        "Any additional information you consider relevant for any clarification, i.e."
-        "model special features, recipe to deal with MBH evolution etc.")
+        "Romulus25 incorporates subgrid dynamical friction to deal w/ black hole evolution.")
 
     #**********************************************************#
     #**********************************************************#
@@ -420,7 +417,7 @@ def main():
 
     metadata, mbhenv = input_data()
     filename = "MBH_Environment_Catalog_%s.hdf5" % (SIMULATION)
-    write_catalog_hdf5(args.output, metadata, mbhenv)
+    write_catalog_hdf5(filename, metadata, mbhenv)
     
     validate_catalog(filename)
 

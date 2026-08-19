@@ -59,6 +59,13 @@ CATALOGS = [
         "marker": "s",
         "alpha": 0.35, 
     },
+    {
+        "name": "KETJU",
+        "file": "/home/regan/Dropbox/LISA_GW/MBHEnvironments/Catalogues/KETJU/MBH_Environment_Catalog_KETJU.hdf5",
+        "color": "green",
+        "marker": "s",
+        "alpha": 0.35, 
+    },
 ]
 
 # Scatter appearance tuning — small/transparent points work best when

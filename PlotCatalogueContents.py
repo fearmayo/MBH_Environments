@@ -120,7 +120,7 @@ def make_plots(BH_Primary, BH_Secondary, Z, MStellar, Redshift):
 
 if __name__ == "__main__":
 
-    filename = "/home/jregan/data/Analysis/ArepoYTAnalysis/MBHEnvironments/MBH_Environments/SEEDZ/Catalogues/MBH_Environment_Catalog_SEEDZ.hdf5"  # change to your actual file name
+    filename = "/home/regan/Dropbox/LISA_GW/MBHEnvironments/Catalogues/SEEDZ/MBH_Environment_Catalog_SEEDZ.hdf5"  # change to your actual file name
 
     print("Available Datasets:\n")
     with h5py.File(filename, 'r') as f:

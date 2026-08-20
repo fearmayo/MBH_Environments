@@ -129,7 +129,7 @@ def load_subfind(snap, snap_base):
     a = 1.0 / (1.0 + z)
 
     subhalo_pos, subhalo_mass_type, subhalo_halfrad, subhalo_group_nr = [], [], [], []
-    group_r200, group_m200 = [], []
+    group_r200, group_m200, group_firstsub  = [], [], []
 
     for fname in files:
         with h5py.File(fname, "r") as f:
@@ -141,6 +141,7 @@ def load_subfind(snap, snap_base):
             if f["Header"].attrs["Ngroups_ThisFile"] > 0:
                 group_r200.append(f["Group/Group_R_Crit200"][:])
                 group_m200.append(f["Group/Group_M_Crit200"][:])
+                group_firstsub.append(f["Group/GroupFirstSub"][:])
 
     if not subhalo_pos:
         logging.warning(f"[Subfind snap {snap}] No subhalos found in any file")
@@ -152,7 +153,7 @@ def load_subfind(snap, snap_base):
     subhalo_group_nr  = np.concatenate(subhalo_group_nr, axis=0).astype(int)
     group_r200        = np.concatenate(group_r200, axis=0)
     group_m200        = np.concatenate(group_m200, axis=0)
-
+    group_firstsub    = np.concatenate(group_firstsub, axis=0).astype(int) 
     # Positions and radii kept in raw comoving kpc/h for matching
     # Masses converted: code units (1e10 Msun/h) → Msun
     subhalo_mass_msun = subhalo_mass_type * 1e10 / h
@@ -167,6 +168,7 @@ def load_subfind(snap, snap_base):
         "subhalo_group_nr":  subhalo_group_nr,        # (N,) index into group arrays
         "group_r200":        group_r200,              # (M,) comoving kpc/h — converted to physical on output
         "group_m200":        group_m200_msun,         # (M,) Msun
+        "group_firstsub":    group_firstsub,  
         "h": h, "z": z, "a": a,
     }
 
@@ -198,7 +200,9 @@ def match_bh_to_subhalo(bh_pos_code, ds, subfind):
         return None
 
     group_idx = int(subfind["subhalo_group_nr"][idx])
-
+    # Central = this subhalo IS its group's first (most massive) subhalo
+    is_central = (idx == int(subfind["group_firstsub"][group_idx]))
+    position_label = "central" if is_central else "satellite"
     # Convert radii to physical kpc for output
     r200_phys     = float(subfind["group_r200"][group_idx]) * a / h
     halfrad_phys  = subfind["subhalo_halfrad"][idx] * a / h  # (6,) physical kpc
@@ -211,6 +215,7 @@ def match_bh_to_subhalo(bh_pos_code, ds, subfind):
         "M200_Msun":       float(subfind["group_m200"][group_idx]),
         "SubhaloMassType": subfind["subhalo_mass_type"][idx],   # (6,) Msun, all types
         "SubhaloHalfRad":  halfrad_phys,                        # (6,) physical kpc
+        "Position": position_label,
     }
 
 
@@ -383,7 +388,8 @@ def process_snapshot(args):
         R50_sub      = np.nan  # SubhaloHalfmassRadType[:,4]
         match_dist   = np.nan
         subfind_matched = False
-
+        Position = "unknown"
+        
         if subfind is not None:
             match = match_bh_to_subhalo(center_code, ds, subfind)
             if match is not None:
@@ -394,6 +400,7 @@ def process_snapshot(args):
                 Mgas_sub     = float(match["SubhaloMassType"][0])
                 Mdm_sub      = float(match["SubhaloMassType"][1])
                 R50_sub      = float(match["SubhaloHalfRad"][4])  # stellar half-mass rad (Type4)
+                Position     = match["Position"] 
 
                 # Stellar mass = SubhaloMassType[:,4] (dormant Type4)
                 #              + decontaminated Type5 stellar mass within R200
@@ -480,6 +487,7 @@ def process_snapshot(args):
             "GasMetallicity_Min": Zmin,
             "GasMetallicity_Max": Zmax,
             "R50_kpc": R50,
+            "Position": Position,  
         }
       
 

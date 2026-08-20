@@ -35,9 +35,9 @@ import sys
 
 
 #PICKS
-Feedback = "NoFeedback"
-Region = "Normal2"
-path_to_snapshots = "/home/daxal/data/ProductionRuns/Renaissance/Normal2/0.5Mpc/NoFeedback/"
+Feedback = "FullFeedback"
+Region = "Normal1"
+path_to_snapshots = "/home/daxal/data/ProductionRuns/Renaissance/Normal1/0.5Mpc/Feedback/"
 
 SCRIPTS = [
     ["python", "CreateSinkPickleFile.py", path_to_snapshots, Feedback, Region],

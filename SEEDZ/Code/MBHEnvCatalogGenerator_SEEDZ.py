@@ -263,6 +263,7 @@ def get_binary_information(metadata, feedback):
         HostGalaxyMetallicity[i] = g["GasMetallicity_MW"]
         HostGalaxyR50[i]         = g["R50_kpc"]
         HostGalaxyRedshift[i]    = g["Redshift"]
+        HostGalaxyPoistion[i]    = g["Position"]
     print("Redshift Range = (%1.1f, %1.1f)" % ((Redshift.min(), Redshift.max())))
     metadata["NumberBinaries"] = N
 

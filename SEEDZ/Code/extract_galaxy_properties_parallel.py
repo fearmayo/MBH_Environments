@@ -388,7 +388,7 @@ def process_snapshot(args):
         R50_sub      = np.nan  # SubhaloHalfmassRadType[:,4]
         match_dist   = np.nan
         subfind_matched = False
-        Position = "unknown"
+        Position = "satellite"
         
         if subfind is not None:
             match = match_bh_to_subhalo(center_code, ds, subfind)

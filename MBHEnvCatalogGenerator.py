@@ -25,13 +25,15 @@ This script has four main parts:
 - Validation
     - Make sure numbers of elements all match
     - Even when not doing units checks, make sure values are sane (e.g. all positive, nonzero; etc) - DONE
+    - Make sure HostGalaxyPosition only contains 'central' or 'satellite'
 
 ---
 - Simple usage:
 
-python3 MBHEnvCatalogGenerator_<YourSimulationDataset>.py <your_command_line_arguments>
+python3 MBHEnvCatalogGenerator_<YourSimulationDataset>.py [-o <output_filename.hdf5>]
 
-
+If no output filename is given the catalog is written to
+MBH_Environment_Catalog_<SIMULATION>.hdf5 in the current directory.
 
 """
 ############################################################################################
@@ -41,6 +43,7 @@ python3 MBHEnvCatalogGenerator_<YourSimulationDataset>.py <your_command_line_arg
 ############################################################################################
 
 # relevant packages, DO NOT REMOVE THEM
+import argparse
 import datetime
 from pathlib import Path
 
@@ -53,7 +56,6 @@ import glob
 
 __VERSION__ = '1.0' # catalog version
 DEBUG = False
-DEF_FILENAME = "example-sim"
 np.random.seed(5)
 
 ############################################################################################
@@ -64,12 +66,12 @@ np.random.seed(5)
 ############################################################################################
 ############################################################################################
 
-#You'll need to change this to your simulation
-SIMULATION="SEEDZ"
+# You'll need to change this to the name of your simulation / model
+SIMULATION = "example-sim"
 
 def input_data():
     '''
-    This function collects the necessary information to produce the MBH Env Catalog
+    This function collects the necessary information to produce the MBH Env catalog.
 
     Users should perform the following actions:
     1) edit the 'metadata' dictionary in this function to provide the specific information concerning a certain model;
@@ -105,16 +107,16 @@ def input_data():
         # ---- Header data - identifying information for the dataset
         # REQUIRED
         'SimulationName': SIMULATION,
-        'SimulationVersion': 'LowRes',
+        'SimulationVersion': 'v1',
         'ModelType': 'Hydro',
         'Version': __VERSION__,
         'Date': str(datetime.datetime.now()),
-        'Contributor': ["John Regan", "Daxal Mehta", "Lewis Prole"],
-        'Email': ["john.regan@mu.ie"],
-        'Principal': ["John Regan"],
+        'Contributor': ["Your Name"],
+        'Email': ["your.name@institution.edu"],
+        'Principal': ["Your Name"],
         'Reference': ["DOI1", "DOI2"],
         # OPTIONAL:
-        'Website': ["https://www.github.com/mbonetti90/MBHCatalogs"],
+        'Website': ["None"],
 
         # ---- Model parameters - metadata specification for simulation(s) used to construct catalog
         # REQUIRED
@@ -160,6 +162,10 @@ def get_binary_information(metadata):
     THE CODE BELOW PRODUCES FAKE BINARIES PROPERTIES, 
     PLEASE REPLACE IT WITH CUSTOMARY CODE TO COLLECT BINARIES FROM YOUR MODEL.
 
+    Every field below must be a 1D array with one entry per binary (length N_binaries).
+    A single scalar (e.g. galpos = "central") is NOT valid and will be rejected when the
+    file is written.
+
     # Required fields
         N_binaries: number of binaries 
         
@@ -178,8 +184,8 @@ def get_binary_information(metadata):
         zgal: redshift of galaxy stellar mass [None]
         R50: half-mass radius or effective radius [proper kpc]
         mhalo: Host halo mass at merger or just after [M_sun]
-        galpos: Can be either central or satellite [string]
-        metallicity: Metalicity of host galaxy at merger or just after [Z_msun]
+        galpos: Must be exactly 'central' or 'satellite' for every binary [string]
+        metallicity: Mass-weighted gas metallicity of host galaxy at merger or just after [Z/Z_sun]
     
 
     Returns: dictionary 
@@ -211,11 +217,12 @@ def get_binary_information(metadata):
     galid = galid
     sfr = {}
     mstar = np.random.normal(loc=1e10, scale=1e8, size=N_binaries)
-    mdm = mstar * np.maximum(1.0, np.random.normal(loc=10.0, scale=1.0, size=N_binaries))
+    mhalo = mstar * np.maximum(1.0, np.random.normal(loc=10.0, scale=1.0, size=N_binaries))
     zgal = z - np.random.uniform(0, 0.001, size=N_binaries)
     R50 = np.random.normal(loc=3, scale=0.1, size=N_binaries)
-    metallicity =  np.random.normal(loc=1e10, scale=1e8, size=N_binaries)
-    galpos = "central"
+    metallicity = 10.0 ** np.random.uniform(-4.0, 0.0, size=N_binaries)   # Z/Z_sun
+    # one entry per binary, each exactly "central" or "satellite"
+    galpos = np.random.choice(["central", "satellite"], size=N_binaries, p=[0.4, 0.6])
    
     # FILL METADATA INFO
     # total number of merged binaries assuming no delays
@@ -251,7 +258,7 @@ def get_binary_information(metadata):
             'GalaxyID': galid,
             'SFR': sfr,
             'HostGalaxyStellarMass': mstar,
-            'HostGalaxyHaloMass': mdm,
+            'HostGalaxyHaloMass': mhalo,
             'HostGalaxyRedshift': zgal,
             'HostGalaxyR50': R50,
             'HostGalaxyMetallicity': metallicity,
@@ -260,6 +267,45 @@ def get_binary_information(metadata):
     }
 
     return mbhenv
+
+############################################################################################
+#### PART B/C: HDF5 WRITING AND VALIDATION - DO NOT MODIFY #################################
+############################################################################################
+
+def _prepare_for_hdf5(key, arr):
+    """
+    Convert an input array into something h5py can store safely.
+
+      - scalars are rejected (every field must have one entry per binary)
+      - None entries become np.nan
+      - string arrays become fixed-width byte strings whose width is computed from the
+        longest entry, so no string is ever truncated
+    """
+    arr_np = np.array(arr)
+
+    if arr_np.ndim == 0:
+        raise ValueError(
+            f"Field '{key}' is a scalar. Every field must be an array with one entry per binary."
+        )
+
+    # ---------- FIX 1: Replace None with np.nan ----------
+    if arr_np.dtype == object:
+        arr_np = np.array([np.nan if x is None else x for x in arr_np])
+
+    # ---------- FIX 2: Convert remaining object strings ----------
+    if arr_np.dtype == object:
+        if all(isinstance(x, str) for x in arr_np):
+            max_len = max(len(x) for x in arr_np)
+            arr_np = arr_np.astype(f'S{max_len}')
+        else:
+            raise TypeError(f"Cannot store field '{key}' with mixed dtype object.")
+
+    # ---------- FIX 3: Convert Unicode strings ----------
+    if arr_np.dtype.kind == 'U':  # Unicode dtype <U...
+        arr_np = arr_np.astype('S')
+
+    return arr_np
+
 
 def write_catalog_hdf5(filename, metadata, mbhenv):
     """
@@ -283,10 +329,10 @@ def write_catalog_hdf5(filename, metadata, mbhenv):
         for key, value in metadata.items():
             # store strings as fixed-length UTF-8
             if isinstance(value, str):
-                gmeta.attrs[key] = np.string_(value)
+                gmeta.attrs[key] = np.bytes_(value)
             elif isinstance(value, list):
                 # convert lists-of-strings to variable-length strings
-                gmeta.attrs[key] = [np.string_(v) for v in value]
+                gmeta.attrs[key] = [np.bytes_(v) for v in value]
             else:
                 gmeta.attrs[key] = value
 
@@ -295,23 +341,25 @@ def write_catalog_hdf5(filename, metadata, mbhenv):
         # ----------------------------------------------------
         gbh = f.create_group("Binaries")
         for key, arr in mbhenv["BlackHoles"].items():
-            gbh.create_dataset(key, data=np.array(arr),
+            gbh.create_dataset(key, data=_prepare_for_hdf5(key, arr),
                                compression="gzip")
 
         # ----------------------------------------------------
-        # Host galaxy information
+        # Host galaxy information (robust string handling)
         # ----------------------------------------------------
         ggal = f.create_group("HostGalaxy")
         for key, arr in mbhenv["HostGalaxy"].items():
-            # SFR is a special dictionary → store separately
+
+            # SFR is a subgroup
             if key == "SFR":
                 gsfr = ggal.create_group("SFR")
                 for k2, arr2 in arr.items():
-                    gsfr.create_dataset(k2, data=np.array(arr2),
-                                        compression="gzip")
-            else:
-                ggal.create_dataset(key, data=np.array(arr),
-                                    compression="gzip")
+                    arr2_np = np.array(arr2)
+                    gsfr.create_dataset(k2, data=arr2_np, compression="gzip")
+                continue
+
+            ggal.create_dataset(key, data=_prepare_for_hdf5(key, arr),
+                                compression="gzip")
 
     print(f"[✓] Wrote catalog to {filename}")
 
@@ -323,6 +371,7 @@ def validate_catalog(filename):
       - Required datasets exist
       - Arrays have consistent lengths
       - No invalid dtypes (e.g. object)
+      - HostGalaxyPosition only contains 'central' or 'satellite'
       - No NaNs in required fields
     """
 
@@ -392,6 +441,16 @@ def validate_catalog(filename):
 
         print("[Validator] Datatypes OK")
 
+        # ---- Check HostGalaxyPosition labels ----
+        labels = {p.decode("utf-8") if isinstance(p, bytes) else str(p)
+                  for p in gal["HostGalaxyPosition"][:]}
+        bad = sorted(labels - {"central", "satellite"})
+        if bad:
+            raise ValueError(
+                f"[Validator] HostGalaxyPosition must be 'central' or 'satellite', found: {bad}"
+            )
+        print("[Validator] HostGalaxyPosition labels OK")
+
         # ---- Check no NaNs in required numeric fields ----
         numeric_bh_fields = ["PrimaryMass", "Redshift", "NumberDensity"]
         numeric_gal_fields = ["HostGalaxyStellarMass", "HostGalaxyHaloMass",
@@ -409,14 +468,25 @@ def validate_catalog(filename):
 
     print("[Validator] ✓ Catalog validation PASSED\n")
 
+############################################################################################
+#### PART D: MAIN ROUTINE - DO NOT MODIFY ##################################################
+############################################################################################
+
 def main():
-    print("Generating MBH Environment Catalog...")
+    parser = argparse.ArgumentParser(description="Generate the MBH Environments catalog.")
+    parser.add_argument(
+        "-o", "--output",
+        default="MBH_Environment_Catalog_%s.hdf5" % (SIMULATION),
+        help="Output HDF5 filename (default: MBH_Environment_Catalog_<SIMULATION>.hdf5)",
+    )
+    args = parser.parse_args()
+
+    print("Generating MBH Environment Catalog for %s..." % (SIMULATION))
 
     metadata, mbhenv = input_data()
-    filename = "MBH_Environment_Catalog_%s.hdf5" % (SIMULATION)
+
     write_catalog_hdf5(args.output, metadata, mbhenv)
-    
-    validate_catalog(filename)
+    validate_catalog(args.output)
 
 if __name__ == "__main__":
     main()

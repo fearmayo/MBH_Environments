@@ -64,18 +64,16 @@ np.random.seed(5)
 ############################################################################################
 ############################################################################################
 
-
+#You'll need to change this to your simulation
 SIMULATION="SEEDZ"
 
-def input_data(feedback):
+def input_data():
     '''
-    This function collects the necessary information to produce the MBH Env catalog.
+    This function collects the necessary information to produce the MBH Env Catalog
 
     Users should perform the following actions:
-    1) edit the 'metadata' dictionary in this function to provide with the specific information concerning a certain model;
-    2) edit the 'MBHB_no_delay' function to provide with the no-delay binary catalog;
-    3) [optional] edit the 'MBHB_delay' function to provide with the delay binary catalog. Leave an empty dict if the delay model is not present;
-    4) edit the MBH_population function to provide with the complete MBH population at selected redshifts.
+    1) edit the 'metadata' dictionary in this function to provide the specific information concerning a certain model;
+    2) edit the 'get_binary_information' function in order to populate the numpy arrays with information from your datasets
 
     IMPORTANT: If a field does not apply to your specific model (e.g. spatial resolution for EPS SAMs), set it to 'np.nan'.
 
@@ -107,7 +105,7 @@ def input_data(feedback):
         # ---- Header data - identifying information for the dataset
         # REQUIRED
         'SimulationName': SIMULATION,
-        'SimulationVersion': 'HighRes',
+        'SimulationVersion': 'LowRes',
         'ModelType': 'Hydro',
         'Version': __VERSION__,
         'Date': str(datetime.datetime.now()),
@@ -116,22 +114,22 @@ def input_data(feedback):
         'Principal': ["John Regan"],
         'Reference': ["DOI1", "DOI2"],
         # OPTIONAL:
-        'Website': ["None"],
+        'Website': ["https://www.github.com/mbonetti90/MBHCatalogs"],
 
         # ---- Model parameters - metadata specification for simulation(s) used to construct catalog
         # REQUIRED
-        'HubbleConstant': 67.4, #km s^-1 Mpc^-1
-        'OmegaMatter': 0.315,
-        'OmegaLambda': 0.685,
-        'BoxSize': 1e0, # cMpc h^-1
+        'HubbleConstant': 70, #km s^-1 Mpc^-1
+        'OmegaMatter': 0.3,
+        'OmegaLambda': 0.7,
+        'BoxSize': 1e0, # cMpc h^-1 (comoving)
         'MinBHSeedMass': 5e3, #M_sun
         'MinRedshift': 10,
         'MaxRedshift': 20,
         'StellarMassResolution': 1e3, # M_sun
-        'DarkMatterMassResolution': 1e4, # M_sun
-        'SpatialResolution': 5, # h^-1 pc (comoving)
+        'DarkMatterMassResolution': 1e5, # M_sun
+        'SpatialResolution': 5, # pc h^-1 (comoving)
         # OPTIONAL:
-        'MinimumDarkMatterHaloMass': 1e5, # M_sun
+        'MinimumDarkMatterHaloMass': 1e6, # M_sun
         'GasMassResolution': 1e2, # M_sun
     }
     #*********************************************************#
@@ -142,14 +140,14 @@ def input_data(feedback):
     ###########################################################
 
 
-    mbhenv = get_binary_information(metadata, feedback)
+    mbhenv = get_binary_information(metadata)
 
 
     return metadata, mbhenv
 
 ############################################################################################
 
-def get_binary_information(metadata, feedback):
+def get_binary_information(metadata):
 
     '''
     Function to collect properties of binaries assuming no-delay models.
@@ -186,107 +184,78 @@ def get_binary_information(metadata, feedback):
 
     Returns: dictionary 
     '''
-    """
-    Load real MBH binary and host galaxy information from the Step 3
-    output pickle and populate the MBH Environments catalog structure.
-    """
+    ID = 0
+    ###########################################################
+    ####### CHANGE THE CODE BELOW #############################
+    ###########################################################
+    #*********************************************************#
+    #*********************************************************#
 
-    import os
+    # generate fake binary properties
+    N_binaries = 1000
 
-    files = []
-    if feedback == "NoFeedback":
-        candidates = [
-            "Normal1_NoFeedback/galaxy_properties.pkl",
-            "Normal2_NoFeedback/galaxy_properties.pkl",
-            "Rarepeak_NoFeedback/galaxy_properties.pkl",
-        ]
-    elif feedback == "WeakFeedback":
-        candidates = [
-            "Normal1_WeakFeedback/galaxy_properties.pkl",
-            #"Normal2_WeakFeedback/galaxy_properties.pkl",
-            #"Rarepeak_WeakFeedback/galaxy_properties.pkl",
-        ]
-    elif feedback == "FullFeedback":
-        candidates = [
-            "Normal1_FullFeedback/galaxy_properties.pkl",
-            #"Normal2_FullFeedback/galaxy_properties.pkl",
-            #"Rarepeak_FullFeedback/galaxy_properties.pkl",
-        ]
-       
-    for f in candidates:
-        if os.path.exists(f):
-            files.append(f)
-        else:
-            print(f"[WARN] Skipping missing file: {f}")
-    print("Reading files: ", files)
-    galaxyresults = {}
-    for galfile in files:
-        with open(galfile, "rb") as f:
-            data = pickle.load(f)
-        max_id = max(galaxyresults.keys()) if galaxyresults else 0
-        for k, v in data.items():
-            galaxyresults[max_id + k + 1] = v
+    #Black Hole properties
+    galid = np.arange(N_binaries)
+    m1 = np.random.normal(loc=1e7, scale=1e6, size=N_binaries)
+    m2 = np.random.normal(loc=1e7, scale=1e6, size=N_binaries)
+    m1, m2 = np.max([m1, m2], axis=0), np.min([m1, m2], axis=0)
+    z = 0.01 + np.random.uniform(0, 10, size=N_binaries)
+    sepa = 10.0 ** np.random.uniform(2.0, 4.0, size=N_binaries)
+    # number density
+    W = 1/metadata["BoxSize"]**3*np.ones(len(m1))
+    
+    
+    #Host galaxy properties
 
-        print(f"Loaded {galfile}: {len(data)} galaxies")
-    galaxy_ids = sorted(galaxyresults.keys())
-    N = len(galaxy_ids)
-    print("N = ", N)
-    # --- Preallocate arrays ---
-    PrimaryMass        = np.zeros(N)
-    SecondaryMass      = np.full(N, np.nan)   # Only primary BH mass available
-    Redshift           = np.zeros(N)
-    Separation         = np.full(N, np.nan)   # Fill with NaN (not provided)
-    NumberDensity      = np.zeros(N)
+    # generate fake binary-host galaxy-remnant properties
+    galid = galid
+    sfr = {}
+    mstar = np.random.normal(loc=1e10, scale=1e8, size=N_binaries)
+    mdm = mstar * np.maximum(1.0, np.random.normal(loc=10.0, scale=1.0, size=N_binaries))
+    zgal = z - np.random.uniform(0, 0.001, size=N_binaries)
+    R50 = np.random.normal(loc=3, scale=0.1, size=N_binaries)
+    metallicity =  np.random.normal(loc=1e10, scale=1e8, size=N_binaries)
+    galpos = "central"
+   
+    # FILL METADATA INFO
+    # total number of merged binaries assuming no delays
+    metadata['NumberBinaries'] = N_binaries
 
-    HostGalaxyStellarMass = np.zeros(N)
-    HostGalaxyHaloMass    = np.zeros(N)
-    HostGalaxyMetallicity = np.zeros(N)
-    HostGalaxyR50         = np.zeros(N)
-    HostGalaxyRedshift    = np.zeros(N)
-    HostGalaxyPosition    = np.array(["satellite"] * N, dtype=object)
+    # provide an explanation of the merger criterion, modify the string
+    metadata['MergerCriteria'] = (
+        "mergers occur when two MBH particles come within a gravitational softening length of "
+        "eachother, and the kinetic energy of the pair is less than the gravitational "
+        "potential energy between them.")
+    
+    metadata['Comments'] = (
+        "Any additional information you consider relevant for any clarification, i.e."
+        "model special features, recipe to deal with MBH evolution etc.")
 
-    Vbox = metadata["BoxSize"]**3
+    #**********************************************************#
+    #**********************************************************#
+    ############################################################
+    # DO NOT CHANGE DICTIONARY AND RETURN ######################
+    ############################################################
 
-    for i, gid in enumerate(galaxy_ids):
-        g = galaxyresults[gid]
-
-        # Binary properties
-        PrimaryMass[i]   = g["BHPrimaryMass"]
-        SecondaryMass[i] = g["BHRemnantMass"]- g["BHPrimaryMass"]
-        #print("SecondaryMass[%d] = %e" % (i, SecondaryMass[i]))
-        Redshift[i]      = g["Redshift"]
-        NumberDensity[i] = 1.0 / Vbox
-
-        # Host galaxy
-        HostGalaxyStellarMass[i] = g["StellarMass"]
-        HostGalaxyHaloMass[i]    = g["HaloMass"]
-        HostGalaxyMetallicity[i] = g["GasMetallicity_MW"]
-        HostGalaxyR50[i]         = g["R50_kpc"]
-        HostGalaxyRedshift[i]    = g["Redshift"]
-        HostGalaxyPosition[i]    = g["Position"]
-
-    print("Redshift Range = (%1.1f, %1.1f)" % ((Redshift.min(), Redshift.max())))
-    metadata["NumberBinaries"] = N
-
-    # --- Final mbhenv dictionary ---
+    # collect data in a dictionary
     mbhenv = {
         "BlackHoles": {
-            "GalaxyID": np.array(galaxy_ids),
-            "PrimaryMass": PrimaryMass,
-            "SecondaryMass": SecondaryMass,
-            "Redshift": Redshift,
-            "Separation": Separation,
-            "NumberDensity": NumberDensity,
+            'GalaxyID': galid,
+            'PrimaryMass': m1,
+            'SecondaryMass': m2,
+            'Redshift': z,
+            'Separation': sepa,
+            'NumberDensity': W,
         },
         "HostGalaxy": {
-            "GalaxyID": np.array(galaxy_ids),
-            "HostGalaxyStellarMass": HostGalaxyStellarMass,
-            "HostGalaxyHaloMass": HostGalaxyHaloMass,
-            "HostGalaxyMetallicity": HostGalaxyMetallicity,
-            "HostGalaxyR50": HostGalaxyR50,
-            "HostGalaxyRedshift": HostGalaxyRedshift,
-            "HostGalaxyPosition": HostGalaxyPosition,
-            "SFR": {},  # optional
+            'GalaxyID': galid,
+            'SFR': sfr,
+            'HostGalaxyStellarMass': mstar,
+            'HostGalaxyHaloMass': mdm,
+            'HostGalaxyRedshift': zgal,
+            'HostGalaxyR50': R50,
+            'HostGalaxyMetallicity': metallicity,
+            'HostGalaxyPosition': galpos,
         }
     }
 
@@ -329,48 +298,22 @@ def write_catalog_hdf5(filename, metadata, mbhenv):
             gbh.create_dataset(key, data=np.array(arr),
                                compression="gzip")
 
-
         # ----------------------------------------------------
-        # Host galaxy information (robust string handling)
+        # Host galaxy information
         # ----------------------------------------------------
         ggal = f.create_group("HostGalaxy")
         for key, arr in mbhenv["HostGalaxy"].items():
-
-            # SFR is a subgroup
+            # SFR is a special dictionary → store separately
             if key == "SFR":
                 gsfr = ggal.create_group("SFR")
                 for k2, arr2 in arr.items():
-                    arr2_np = np.array(arr2)
-                    gsfr.create_dataset(k2, data=arr2_np, compression="gzip")
-                continue
-
-            # Convert to numpy array *first*
-            arr_np = np.array(arr)
-
-            # Debug print (optional)
-            # print("KEY:", key, "DTYPE:", arr_np.dtype, "EXAMPLE:", arr_np[0])
-            
-            # ---------- FIX 1: Replace None with np.nan ----------
-            if arr_np.dtype == object:
-                arr_np = np.array([np.nan if x is None else x for x in arr_np])
-                
-            # ---------- FIX 2: Convert remaining object strings ----------
-            if arr_np.dtype == object:
-                if all(isinstance(x, str) for x in arr_np):
-                    max_len = max(len(x) for x in arr_np)   
-                    arr_np = arr_np.astype(f'S{max_len}')
-                else:
-                    raise TypeError(f"Cannot store field '{key}' with mixed dtype object.")
-
-            # ---------- FIX 3: Convert Unicode strings ----------
-            if arr_np.dtype.kind == 'U':  # Unicode dtype <U...
-                arr_np = arr_np.astype('S')
-
-            # Create dataset
-            ggal.create_dataset(key, data=arr_np, compression="gzip")
+                    gsfr.create_dataset(k2, data=np.array(arr2),
+                                        compression="gzip")
+            else:
+                ggal.create_dataset(key, data=np.array(arr),
+                                    compression="gzip")
 
     print(f"[✓] Wrote catalog to {filename}")
-
 
 def validate_catalog(filename):
     """
@@ -452,7 +395,7 @@ def validate_catalog(filename):
         # ---- Check no NaNs in required numeric fields ----
         numeric_bh_fields = ["PrimaryMass", "Redshift", "NumberDensity"]
         numeric_gal_fields = ["HostGalaxyStellarMass", "HostGalaxyHaloMass",
-                              "HostGalaxyMetallicity"]
+                              "HostGalaxyMetallicity", "HostGalaxyR50"]
 
         for key in numeric_bh_fields:
             if np.isnan(bh[key][:]).any():
@@ -466,24 +409,14 @@ def validate_catalog(filename):
 
     print("[Validator] ✓ Catalog validation PASSED\n")
 
-
 def main():
-    import shutil
-    import argparse
-    parser = argparse.ArgumentParser()
-    parser.add_argument("fb", help="Which AGN feedback prescription are we extracting (NoFeedback, WeakFeedback or FullFeedback)?")
-    args = parser.parse_args()
-    print("Generating MBH Environment Catalog for %s..." % (SIMULATION))
+    print("Generating MBH Environment Catalog...")
 
-    metadata, mbhenv = input_data(args.fb)
-  
+    metadata, mbhenv = input_data()
     filename = "MBH_Environment_Catalog_%s.hdf5" % (SIMULATION)
-    write_catalog_hdf5(filename, metadata, mbhenv)
-    shutil.copy(filename, '../Catalogues/')
-    print(f"[✓] Wrote final catalog to %s" % (filename))
-
+    write_catalog_hdf5(args.output, metadata, mbhenv)
+    
     validate_catalog(filename)
-
 
 if __name__ == "__main__":
     main()
